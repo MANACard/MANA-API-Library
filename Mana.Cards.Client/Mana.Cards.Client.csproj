@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E79801B5-7BEF-4A10-9D97-E699B16E0359}</ProjectGuid>
-    <OutputType>Winexe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mana.Cards.Client</RootNamespace>
     <AssemblyName>Mana.Cards.Client</AssemblyName>
@@ -13,50 +13,26 @@
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Executable|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputType>WinExe</OutputType>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Executable\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestAPI-Library|AnyCPU'">
-    <OutputPath>bin\TestAPI-Library\</OutputPath>
-    <OutputType>Library</OutputType>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestAPI-Executable|AnyCPU'">
-    <OutputPath>bin\TestAPI-Executable\</OutputPath>
-    <OutputType>Winexe</OutputType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProductionAPI-Library|AnyCPU'">
-    <OutputPath>bin\ProductionAPI-Library\</OutputPath>
-    <OutputType>Library</OutputType>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProductionAPI-Executable|AnyCPU'">
-    <OutputPath>bin\ProductionAPI-Executable\</OutputPath>
-    <OutputType>Winexe</OutputType>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Library|AnyCPU'">
+    <OutputPath>bin\Library\</OutputPath>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -160,26 +136,7 @@
       <Link>App.config</Link>
       <SubType>Designer</SubType>
     </None>
-    <None Include="..\Mana.Cards.API\App.Debug.config">
-      <Link>App.Debug.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="..\Mana.Cards.API\App.ProductionAPI-Executable.config">
-      <Link>App.ProductionAPI-Executable.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="..\Mana.Cards.API\App.ProductionAPI-Library.config">
-      <Link>App.ProductionAPI-Library.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="..\Mana.Cards.API\App.TestAPI-Executable.config">
-      <Link>App.TestAPI-Executable.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="..\Mana.Cards.API\App.TestAPI-Library.config">
-      <Link>App.TestAPI-Library.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
+    <None Include="App.config.transform" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -249,7 +206,6 @@
     <Copy Condition="Exists('$(DeployedConfig)')" SourceFiles="$(IntermediateOutputPath)$(TargetFileName).config" DestinationFiles="$(DeployedConfig)" />
   </Target>
   <Target Name="AfterBuild">
-    <Copy SourceFiles="..\Mana.Cards.Client.Registration\bin\$(Configuration)\Mana.Cards.Client.Registration.exe.config"
-          DestinationFolder="$(TargetDir)" />
+    <Copy SourceFiles="..\Mana.Cards.Client.Registration\bin\$(Configuration)\Mana.Cards.Client.Registration.exe.config" DestinationFolder="$(TargetDir)" />
   </Target>
 </Project>

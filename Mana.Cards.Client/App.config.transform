@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<configuration>
+    <appSettings>
+		<!-- MANA Card API -->
+		<add key="APIUrl" value="https://app.mana.cards/api/v1"/>
+		<add key="CitiesSearchURL" value="https://app.mana.cards/cities/search?term="/>
+		<add key="CardsEndpoint" value="/cards" />
+		<add key="SalesEndpoint" value="/sales" />
+		<add key="ClientsEndpoint" value="/clients"/>
+		<add key="ClientsCardResolveEndpoint" value="/cards/resolve"/>
+		<add key="ClientsSearchEndpoint" value="/clients/search"/>
+		<add key="OfflineAPI.StorageFolder" value="C:\\mana.cards.temp"/>
+		<add key="ManaAuthID" value="YOUR_AUTH_ID_HERE"/>
+		<add key="ManaAPIKey" value="YOUR_API_KEY_HERE"/>
+		<add key="PrintCouponOnCollect" value="false"/>
+		<add key="PrintCouponOnReedem" value="true"/>
+		<add key="OpenCouponFile" value="true"/>
+		<add key="CouponsPath" value="C:\\mana.cards.coupons"/>
+		<!-- MANA Card API -->
+    </appSettings>
+</configuration>

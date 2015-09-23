@@ -13,46 +13,17 @@
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Executable|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Executable\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestAPI-Library|AnyCPU'">
-    <OutputPath>bin\TestAPI-Library\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestAPI-Executable|AnyCPU'">
-    <OutputPath>bin\TestAPI-Executable\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProductionAPI-Library|AnyCPU'">
-    <OutputPath>bin\ProductionAPI-Library\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProductionAPI-Executable|AnyCPU'">
-    <OutputPath>bin\ProductionAPI-Executable\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Library|AnyCPU'">
+    <OutputPath>bin\Library\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -87,26 +58,6 @@
   <ItemGroup>
     <None Include="..\Mana.Cards.API\App.config">
       <Link>App.config</Link>
-    </None>
-    <None Include="..\Mana.Cards.API\App.Debug.config">
-      <Link>App.Debug.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="..\Mana.Cards.API\App.ProductionAPI-Executable.config">
-      <Link>App.ProductionAPI-Executable.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="..\Mana.Cards.API\App.ProductionAPI-Library.config">
-      <Link>App.ProductionAPI-Library.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="..\Mana.Cards.API\App.TestAPI-Executable.config">
-      <Link>App.TestAPI-Executable.config</Link>
-      <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="..\Mana.Cards.API\App.TestAPI-Library.config">
-      <Link>App.TestAPI-Library.config</Link>
-      <DependentUpon>App.config</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
