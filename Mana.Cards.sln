@@ -83,11 +83,11 @@ Global
 		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Executable|Any CPU.ActiveCfg = Release|Any CPU
-		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Executable|Any CPU.Build.0 = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Executable|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Executable|Any CPU.Build.0 = Debug|Any CPU
 		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Executable|x86.ActiveCfg = Release|Any CPU
-		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Library|Any CPU.ActiveCfg = Release|Any CPU
-		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Library|Any CPU.Build.0 = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Library|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Library|Any CPU.Build.0 = Debug|Any CPU
 		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Library|x86.ActiveCfg = Release|Any CPU
 		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Release|Any CPU.Build.0 = Release|Any CPU

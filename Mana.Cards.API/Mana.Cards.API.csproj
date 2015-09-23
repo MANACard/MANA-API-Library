@@ -120,6 +120,7 @@
     <Compile Include="Domain\RecentSaleModel.cs" />
     <Compile Include="Domain\SaleDescriptor.cs" />
     <Compile Include="Domain\SaleDescriptorField.cs" />
+    <Compile Include="Domain\SalesLineItemInfo.cs" />
     <Compile Include="Exceptions\AuthenticationFailedException.cs" />
     <Compile Include="Exceptions\CardNotActiveException.cs" />
     <Compile Include="Exceptions\CardNotFoundException.cs" />

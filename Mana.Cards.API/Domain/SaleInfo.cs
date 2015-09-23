@@ -38,5 +38,8 @@ namespace Mana.Cards.API.Domain
             get;
             set;
         }
+
+        [JsonProperty("sales_line_items")]
+        public List<SalesLineItemInfo> SalesLineItems { get; set; }
     }
 }
