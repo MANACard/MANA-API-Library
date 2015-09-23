@@ -1,0 +1,105 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mana.Cards.Client", "Mana.Cards.Client\Mana.Cards.Client.csproj", "{E79801B5-7BEF-4A10-9D97-E699B16E0359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mana.Cards.API", "Mana.Cards.API\Mana.Cards.API.csproj", "{A277B103-9616-4FA7-973E-71A844C94B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mana.Cards.OfflineAPI", "Mana.Cards.OfflineAPI\Mana.Cards.OfflineAPI.csproj", "{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mana.Cards.Client.Registration", "Mana.Cards.Client.Registration\Mana.Cards.Client.Registration.csproj", "{DCAE55C6-01C7-45C9-979E-0D8D1F603779}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		ProductionAPI-Executable|Any CPU = ProductionAPI-Executable|Any CPU
+		ProductionAPI-Executable|x86 = ProductionAPI-Executable|x86
+		ProductionAPI-Library|Any CPU = ProductionAPI-Library|Any CPU
+		ProductionAPI-Library|x86 = ProductionAPI-Library|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		TestAPI-Executable|Any CPU = TestAPI-Executable|Any CPU
+		TestAPI-Executable|x86 = TestAPI-Executable|x86
+		TestAPI-Library|Any CPU = TestAPI-Library|Any CPU
+		TestAPI-Library|x86 = TestAPI-Library|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.ProductionAPI-Executable|Any CPU.ActiveCfg = ProductionAPI-Executable|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.ProductionAPI-Executable|Any CPU.Build.0 = ProductionAPI-Executable|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.ProductionAPI-Executable|x86.ActiveCfg = ProductionAPI-Executable|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.ProductionAPI-Library|Any CPU.ActiveCfg = ProductionAPI-Library|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.ProductionAPI-Library|Any CPU.Build.0 = ProductionAPI-Library|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.ProductionAPI-Library|x86.ActiveCfg = ProductionAPI-Library|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.Release|Any CPU.ActiveCfg = TestAPI-Library|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.Release|Any CPU.Build.0 = TestAPI-Library|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.Release|x86.ActiveCfg = TestAPI-Library|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.TestAPI-Executable|Any CPU.ActiveCfg = TestAPI-Executable|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.TestAPI-Executable|Any CPU.Build.0 = TestAPI-Executable|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.TestAPI-Executable|x86.ActiveCfg = TestAPI-Executable|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.TestAPI-Library|Any CPU.ActiveCfg = TestAPI-Library|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.TestAPI-Library|Any CPU.Build.0 = TestAPI-Library|Any CPU
+		{E79801B5-7BEF-4A10-9D97-E699B16E0359}.TestAPI-Library|x86.ActiveCfg = TestAPI-Library|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.ProductionAPI-Executable|Any CPU.ActiveCfg = ProductionAPI-Executable|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.ProductionAPI-Executable|Any CPU.Build.0 = ProductionAPI-Executable|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.ProductionAPI-Executable|x86.ActiveCfg = ProductionAPI-Executable|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.ProductionAPI-Library|Any CPU.ActiveCfg = ProductionAPI-Library|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.ProductionAPI-Library|Any CPU.Build.0 = ProductionAPI-Library|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.ProductionAPI-Library|x86.ActiveCfg = ProductionAPI-Library|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.Release|x86.ActiveCfg = Release|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.TestAPI-Executable|Any CPU.ActiveCfg = TestAPI-Executable|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.TestAPI-Executable|Any CPU.Build.0 = TestAPI-Executable|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.TestAPI-Executable|x86.ActiveCfg = TestAPI-Executable|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.TestAPI-Library|Any CPU.ActiveCfg = TestAPI-Library|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.TestAPI-Library|Any CPU.Build.0 = TestAPI-Library|Any CPU
+		{A277B103-9616-4FA7-973E-71A844C94B81}.TestAPI-Library|x86.ActiveCfg = TestAPI-Library|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.ProductionAPI-Executable|Any CPU.ActiveCfg = ProductionAPI-Executable|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.ProductionAPI-Executable|Any CPU.Build.0 = ProductionAPI-Executable|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.ProductionAPI-Executable|x86.ActiveCfg = ProductionAPI-Executable|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.ProductionAPI-Library|Any CPU.ActiveCfg = ProductionAPI-Library|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.ProductionAPI-Library|Any CPU.Build.0 = ProductionAPI-Library|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.ProductionAPI-Library|x86.ActiveCfg = ProductionAPI-Library|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.TestAPI-Executable|Any CPU.ActiveCfg = TestAPI-Executable|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.TestAPI-Executable|Any CPU.Build.0 = TestAPI-Executable|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.TestAPI-Executable|x86.ActiveCfg = TestAPI-Executable|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.TestAPI-Library|Any CPU.ActiveCfg = TestAPI-Library|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.TestAPI-Library|Any CPU.Build.0 = TestAPI-Library|Any CPU
+		{DD56F3DE-50C6-42B6-8A3B-719F5609FDD1}.TestAPI-Library|x86.ActiveCfg = TestAPI-Library|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Executable|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Executable|Any CPU.Build.0 = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Executable|x86.ActiveCfg = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Library|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Library|Any CPU.Build.0 = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.ProductionAPI-Library|x86.ActiveCfg = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.Release|x86.ActiveCfg = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.TestAPI-Executable|Any CPU.ActiveCfg = TestAPI-Executable|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.TestAPI-Executable|Any CPU.Build.0 = TestAPI-Executable|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.TestAPI-Executable|x86.ActiveCfg = Release|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.TestAPI-Library|Any CPU.ActiveCfg = TestAPI-Library|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.TestAPI-Library|Any CPU.Build.0 = TestAPI-Library|Any CPU
+		{DCAE55C6-01C7-45C9-979E-0D8D1F603779}.TestAPI-Library|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
