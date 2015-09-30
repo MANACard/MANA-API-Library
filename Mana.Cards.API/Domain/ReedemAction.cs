@@ -14,5 +14,12 @@ namespace Mana.Cards.API.Domain
             get;
             set;
         }
+
+        [JsonIgnore]
+        public decimal Value
+        { 
+            get;
+            set; 
+        }
     }
 }

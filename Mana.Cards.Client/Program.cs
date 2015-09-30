@@ -44,8 +44,9 @@ namespace Mana.Cards.Client
 
                         APISession.Instance.POSUSer = posUser;
                     }
+                    sale.Redeem.Value = 40;
                     //ag pass the filename also
-                    Application.Run(new SalesForm(sale, Path.GetDirectoryName(path), path));
+                    Application.Run(new SalesForm(sale, Path.GetDirectoryName(path), path, false, true));
                 }
                 catch (Exception)
                 {

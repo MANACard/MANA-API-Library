@@ -10,5 +10,6 @@ namespace Mana.Cards.API.Services
     {
         CardInfo GetCardInfo(string barcode);
         CardInfo Resolve(DateTime birthdate, string phone);
+        RedeemRule GetRedeemRule();
     }
 }

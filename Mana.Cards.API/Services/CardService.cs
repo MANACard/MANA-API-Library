@@ -68,9 +68,64 @@ namespace Mana.Cards.API.Services
                 throw;
             }
 
-            return null;
         }
 
+        public RedeemRule GetRedeemRule()
+        {
+            var url = String.Format("{0}/{1}", Config.CardsEndpointURL, "redeem_rules");
+
+            var request = System.Net.WebRequest.Create(url) as System.Net.HttpWebRequest;
+            request.KeepAlive = true;
+
+            request.Method = "GET";
+            request.ContentLength = 0;
+
+
+            request.ContentType = "application/json";
+
+            APIHeadersHelper.InjectAPIHeaders(request.Headers);
+
+            try
+            {
+                string responseContent = null;
+                using (var response = request.GetResponse() as System.Net.HttpWebResponse)
+                {
+                    using (var reader = new System.IO.StreamReader(response.GetResponseStream()))
+                    {
+                        responseContent = reader.ReadToEnd();
+                    }
+
+                    var rule = JsonConvert.DeserializeObject<RedeemRule>(responseContent);
+
+                    return rule;
+                }
+            }
+            catch (WebException e)
+            {
+
+                using (WebResponse response = e.Response)
+                {
+                    HttpWebResponse httpResponse = (HttpWebResponse)response;
+
+                    if (httpResponse != null)
+                    {
+                        if (httpResponse.StatusCode == HttpStatusCode.NotFound)
+                        {
+                            throw new CardNotFoundException();
+                        }
+                        else if (httpResponse.StatusCode == HttpStatusCode.Unauthorized)
+                        {
+                            throw new AuthenticationFailedException();
+                        }
+                    }
+                }
+                throw;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
 
         public CardInfo Resolve(DateTime birthdate, string phone)
         {

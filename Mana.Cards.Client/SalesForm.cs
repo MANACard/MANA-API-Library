@@ -27,12 +27,20 @@ namespace Mana.Cards.Client
         #region Properties
         private Sale sale;
         private CardInfo card;
+
         private bool ProcessMode;
+        private bool ExternalRedeem;
+        private bool DisableCancellation; 
+
 
         private string salesFileName;
         private string WriteToPath { get; set; }
-        public SaleInfo SaleInfo { get; set; }
         private string RandomToken { get; set; }
+
+        public SaleInfo SaleInfo { get; set; }
+
+        public RedeemRule RedeemRule { get; set; }
+
         #endregion
 
         #region CTORs
@@ -58,7 +66,7 @@ namespace Mana.Cards.Client
 
             this.Initialize();
         }
-        public SalesForm(Sale sale, string writeToPath, string salesFileName)
+        public SalesForm(Sale sale, string writeToPath, string salesFileName, bool externalRedeem = false, bool disableCancellation = false)
         {
             InitializeComponent();
             WireUpEvents();
@@ -67,16 +75,20 @@ namespace Mana.Cards.Client
             this.WriteToPath = writeToPath;
             this.ProcessMode = true;
             this.salesFileName = salesFileName;
+            this.ExternalRedeem = externalRedeem;
+            this.DisableCancellation = disableCancellation;
 
             this.Initialize();
         }
 
-        public SalesForm(Sale sale)
+        public SalesForm(Sale sale, bool externalRedeem = false, bool disableCancellation = false)
         {
             InitializeComponent();
             WireUpEvents();
 
             this.sale = sale;
+            this.ExternalRedeem = externalRedeem;
+            this.DisableCancellation = disableCancellation;
 
             this.Initialize();
         }
@@ -89,6 +101,33 @@ namespace Mana.Cards.Client
             lblTotal.Text = lblTotalDiscount.Text = sale.Total.ToString("C2", CultureInfo.GetCultureInfo("de-DE"));
             lblTotal.Text = lblTotalDiscount.Text = sale.Total.ToString("C2", CultureInfo.GetCultureInfo("de-DE"));
 
+            ICardService service = new CardService();
+            this.RedeemRule = service.GetRedeemRule();
+
+            lblMinPoints.Text = this.RedeemRule.MinimumRedeemablePoints.ToString();
+
+
+            if (ExternalRedeem)
+            {
+                if (this.sale.Redeem.Points > 0)
+                {
+                    txtRedeemPoints.Text = this.sale.Redeem.Points.ToString();
+                    txtRedeemPoints_KeyUp(null, null);
+                }
+                else if (this.sale.Redeem.Value > 0)
+                {
+                    txtRedeemValue.Text = this.sale.Redeem.Value.ToString();
+                    txtRedeemValue_KeyUp(null, null);
+                }
+
+
+                txtRedeemValue.Enabled = txtRedeemPoints.Enabled = false;
+            }
+
+            if (this.DisableCancellation)
+            {
+                btnSalesCancellation.Visible = false;
+            }
         }
         #endregion
         #region GetSale
@@ -161,7 +200,7 @@ namespace Mana.Cards.Client
                     {
 
                         var print = new CouponPrinter(this.SaleInfo, couponsPath, txtClientName.Text,
-                           txtAvailablePoints.Text, lblTotalDiscount.Text, txtCardBarcode.Text, openCouponFile,printCouponOnCollect,printCouponOnReedem );
+                           txtAvailablePoints.Text, lblTotalDiscount.Text, txtCardBarcode.Text, openCouponFile, printCouponOnCollect, printCouponOnReedem);
 
                     }
 
@@ -285,9 +324,10 @@ namespace Mana.Cards.Client
 
                 txtClientName.Text = String.Format("{0} {1}", this.card.ClientFirstName, this.card.ClientLastName);
                 txtAvailablePoints.Text = this.card.AvailablePoints.ToString();
-                lblMinPoints.Text = this.card.MinimumRedeemablePoints.ToString();
-                txtRedeemPoints.Enabled = true;
-                txtRedeemValue.Enabled = true;
+
+
+                txtRedeemPoints.Enabled = !ExternalRedeem;
+                txtRedeemValue.Enabled = !ExternalRedeem;
             }
             cardProgress.Hide();
         }
@@ -302,24 +342,23 @@ namespace Mana.Cards.Client
             }
         }
 
+        private void txtRedeemValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+                && !char.IsDigit(e.KeyChar)
+                && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
         private void txtRedeemPoints_KeyUp(object sender, KeyEventArgs e)
         {
             int points = 0;
             Int32.TryParse(txtRedeemPoints.Text, out points);
-            decimal value = (points * card.MonetaryValuePerPoint);
+            decimal value = (points * this.RedeemRule.MonetaryValuePerPoint);
 
             UpdateDiscount(value);
             txtRedeemValue.Text = value.ToString();
-        }
-
-        private void txtRedeemValue_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar)
-    && !char.IsDigit(e.KeyChar)
-    && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
         }
 
         private void txtRedeemValue_KeyUp(object sender, KeyEventArgs e)
@@ -327,7 +366,7 @@ namespace Mana.Cards.Client
             decimal value = 0;
             Decimal.TryParse(txtRedeemValue.Text, out value);
 
-            int points = (int)(value / card.MonetaryValuePerPoint);
+            int points = (int)(value / this.RedeemRule.MonetaryValuePerPoint);
 
             txtRedeemPoints.Text = points.ToString();
             UpdateDiscount(value);
