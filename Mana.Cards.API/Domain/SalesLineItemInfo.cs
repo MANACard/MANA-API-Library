@@ -10,11 +10,19 @@ namespace Mana.Cards.API.Domain
     {
         [JsonProperty("product_title")]
         public string ProductTitle { get; set; }
-     
+
         [JsonProperty("product_barcode")]
         public string ProductBarcode { get; set; }
 
         [JsonProperty("rewarded_points")]
         public int RewardedPoints { get; set; }
+        
+        [JsonProperty("rewarded_value")]
+        public decimal RewardedValue
+        {
+            get;
+            set;
+        }
+
     }
 }

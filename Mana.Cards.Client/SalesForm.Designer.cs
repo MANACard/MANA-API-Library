@@ -41,6 +41,7 @@
             this.lblTotal = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.btnResolveCard = new System.Windows.Forms.Button();
             this.txtClientName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.lblMinPoints = new MetroFramework.Controls.MetroLabel();
@@ -57,14 +58,13 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lblUnsynced = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.pnlOfflineSales = new MetroFramework.Controls.MetroPanel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.salesDetails = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.clientRegistrationControl1 = new Mana.Cards.Client.ClientRegistrationControl();
             this.btnSalesCancellation = new MetroFramework.Controls.MetroButton();
             this.lblPartnerName = new MetroFramework.Controls.MetroLabel();
-            this.btnResolveCard = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -185,7 +185,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(175, 13);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(42, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(44, 19);
             this.metroLabel5.TabIndex = 2;
             this.metroLabel5.Text = "Totali:";
             // 
@@ -215,6 +215,16 @@
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // btnResolveCard
+            // 
+            this.btnResolveCard.Location = new System.Drawing.Point(292, 7);
+            this.btnResolveCard.Name = "btnResolveCard";
+            this.btnResolveCard.Size = new System.Drawing.Size(75, 23);
+            this.btnResolveCard.TabIndex = 15;
+            this.btnResolveCard.Text = "Gjej kartelën";
+            this.btnResolveCard.UseVisualStyleBackColor = true;
+            this.btnResolveCard.Click += new System.EventHandler(this.btnResolveCard_Click);
             // 
             // txtClientName
             // 
@@ -315,7 +325,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(9, 135);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(128, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(127, 19);
             this.metroLabel3.TabIndex = 6;
             this.metroLabel3.Text = "Pikët për shfrytëzim:";
             // 
@@ -363,7 +373,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(9, 12);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(62, 19);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Kartela *:";
             // 
@@ -390,23 +400,23 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(493, 231);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(217, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(215, 19);
             this.metroLabel7.TabIndex = 3;
             this.metroLabel7.Text = "Shitje të pasinkronizuara me server:";
             // 
-            // metroPanel4
+            // pnlOfflineSales
             // 
-            this.metroPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel4.HorizontalScrollbarBarColor = true;
-            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(486, 227);
-            this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(254, 28);
-            this.metroPanel4.TabIndex = 4;
-            this.metroPanel4.VerticalScrollbarBarColor = true;
-            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
+            this.pnlOfflineSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOfflineSales.HorizontalScrollbarBarColor = true;
+            this.pnlOfflineSales.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlOfflineSales.HorizontalScrollbarSize = 10;
+            this.pnlOfflineSales.Location = new System.Drawing.Point(486, 227);
+            this.pnlOfflineSales.Name = "pnlOfflineSales";
+            this.pnlOfflineSales.Size = new System.Drawing.Size(254, 28);
+            this.pnlOfflineSales.TabIndex = 4;
+            this.pnlOfflineSales.VerticalScrollbarBarColor = true;
+            this.pnlOfflineSales.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlOfflineSales.VerticalScrollbarSize = 10;
             // 
             // metroTabControl1
             // 
@@ -414,7 +424,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Location = new System.Drawing.Point(24, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-//            this.metroTabControl1.Padding = new System.Drawing.Point(6, 8);
+            this.metroTabControl1.Padding = new System.Drawing.Point(6, 8);
             this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(753, 334);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.White;
@@ -426,7 +436,7 @@
             this.salesDetails.Controls.Add(this.metroLabel7);
             this.salesDetails.Controls.Add(this.lblUnsynced);
             this.salesDetails.Controls.Add(this.metroPanel1);
-            this.salesDetails.Controls.Add(this.metroPanel4);
+            this.salesDetails.Controls.Add(this.pnlOfflineSales);
             this.salesDetails.Enabled = true;
             this.salesDetails.HorizontalScrollbarBarColor = true;
             this.salesDetails.HorizontalScrollbarHighlightOnWheel = false;
@@ -484,16 +494,6 @@
             this.lblPartnerName.Size = new System.Drawing.Size(96, 19);
             this.lblPartnerName.TabIndex = 8;
             this.lblPartnerName.Text = "MANA Partner";
-            // 
-            // btnResolveCard
-            // 
-            this.btnResolveCard.Location = new System.Drawing.Point(292, 7);
-            this.btnResolveCard.Name = "btnResolveCard";
-            this.btnResolveCard.Size = new System.Drawing.Size(75, 23);
-            this.btnResolveCard.TabIndex = 15;
-            this.btnResolveCard.Text = "Gjej kartelën";
-            this.btnResolveCard.UseVisualStyleBackColor = true;
-            this.btnResolveCard.Click += new System.EventHandler(this.btnResolveCard_Click);
             // 
             // SalesForm
             // 
@@ -554,7 +554,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel lblUnsynced;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroPanel metroPanel4;
+        private MetroFramework.Controls.MetroPanel pnlOfflineSales;
         private MetroFramework.Controls.MetroTextBox txtClientName;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;

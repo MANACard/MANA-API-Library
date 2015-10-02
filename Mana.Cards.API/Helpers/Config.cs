@@ -62,5 +62,17 @@ namespace Mana.Cards.API.Helpers
                 return String.Format("{0}{1}", Config.APIUrl, ConfigurationManager.AppSettings["ClientsSearchEndpoint"]);
             }
         }
+        public static bool EnableOfflineAPI
+        {
+            get
+            {
+                bool enableOfflineAPI = true;
+
+                Boolean.TryParse(ConfigurationManager.AppSettings["EnableOfflineAPI"], out enableOfflineAPI);
+
+                return enableOfflineAPI;
+            }
+        }
+
     }
 }

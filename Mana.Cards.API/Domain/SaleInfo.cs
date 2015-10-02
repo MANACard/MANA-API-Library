@@ -26,6 +26,14 @@ namespace Mana.Cards.API.Domain
             get;
             set;
         }
+
+        [JsonProperty("rewarded_value")]
+        public decimal RewardedValue
+        {
+            get;
+            set;
+        }
+
         [JsonProperty("redeemed_points")]
         public int RedeemedPoints
         {

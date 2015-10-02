@@ -128,6 +128,8 @@ namespace Mana.Cards.Client
             {
                 btnSalesCancellation.Visible = false;
             }
+
+            pnlOfflineSales.Visible = metroLabel7.Visible = lblUnsynced.Visible = Config.EnableOfflineAPI;
         }
         #endregion
         #region GetSale
