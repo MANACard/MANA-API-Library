@@ -30,8 +30,8 @@ namespace Mana.Cards.Client
 
         private bool ProcessMode;
         private bool ExternalRedeem;
-        private bool DisableCancellation; 
-
+        private bool DisableCancellation;
+        private bool DisableSale;
 
         private string salesFileName;
         private string WriteToPath { get; set; }
@@ -66,7 +66,7 @@ namespace Mana.Cards.Client
 
             this.Initialize();
         }
-        public SalesForm(Sale sale, string writeToPath, string salesFileName, bool externalRedeem = false, bool disableCancellation = false)
+        public SalesForm(Sale sale, string writeToPath, string salesFileName, bool externalRedeem = false, bool disableCancellation = false, bool disableSale = false)
         {
             InitializeComponent();
             WireUpEvents();
@@ -77,11 +77,12 @@ namespace Mana.Cards.Client
             this.salesFileName = salesFileName;
             this.ExternalRedeem = externalRedeem;
             this.DisableCancellation = disableCancellation;
+            this.DisableSale = disableSale;
 
             this.Initialize();
         }
 
-        public SalesForm(Sale sale, bool externalRedeem = false, bool disableCancellation = false)
+        public SalesForm(Sale sale, bool externalRedeem = false, bool disableCancellation = false, bool disableSale = false)
         {
             InitializeComponent();
             WireUpEvents();
@@ -89,6 +90,7 @@ namespace Mana.Cards.Client
             this.sale = sale;
             this.ExternalRedeem = externalRedeem;
             this.DisableCancellation = disableCancellation;
+            this.DisableSale = disableSale;
 
             this.Initialize();
         }
@@ -130,6 +132,7 @@ namespace Mana.Cards.Client
             }
 
             pnlOfflineSales.Visible = metroLabel7.Visible = lblUnsynced.Visible = Config.EnableOfflineAPI;
+            btnFinishSale.Enabled = !DisableSale;
         }
         #endregion
         #region GetSale

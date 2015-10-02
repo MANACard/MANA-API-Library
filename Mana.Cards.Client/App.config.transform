@@ -17,6 +17,7 @@
 		  <add key="OpenCouponFile" value="true"/>
 		  <add key="CouponsPath" value="C:\\mana.cards.coupons"/>
       <add key="EnableOfflineAPI" value="true" />
+      <add key="DecimalScale" value="2" />
       <!-- MANA Card API -->
     </appSettings>
 </configuration>
