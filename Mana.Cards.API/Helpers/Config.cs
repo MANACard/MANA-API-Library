@@ -73,6 +73,18 @@ namespace Mana.Cards.API.Helpers
                 return enableOfflineAPI;
             }
         }
+        public static int DecimalScale
+        {
+            get
+            {
+                int scale = 2;
+                if (ConfigurationManager.AppSettings["DecimalScale"] != null)
+                {
+                    Int32.TryParse(ConfigurationManager.AppSettings["DecimalScale"], out scale);
+                }
+                return scale;
+            }
+        }
 
     }
 }

@@ -98,8 +98,8 @@ namespace Mana.Cards.Client
         private void Initialize()
         {
             this.RandomToken = RandomTokenHelper.GenerateToken();
-            lblTotal.Text = lblTotalDiscount.Text = sale.Total.ToString("C2", CultureInfo.GetCultureInfo("de-DE"));
-            lblTotal.Text = lblTotalDiscount.Text = sale.Total.ToString("C2", CultureInfo.GetCultureInfo("de-DE"));
+            lblTotal.Text = lblTotalDiscount.Text = sale.Total.ToString("C" + Config.DecimalScale, CultureInfo.GetCultureInfo("de-DE"));
+            lblTotal.Text = lblTotalDiscount.Text = sale.Total.ToString("C" + Config.DecimalScale, CultureInfo.GetCultureInfo("de-DE"));
 
             ICardService service = new CardService();
             this.RedeemRule = service.GetRedeemRule();

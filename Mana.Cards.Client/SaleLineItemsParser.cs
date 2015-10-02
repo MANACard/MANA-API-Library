@@ -40,7 +40,7 @@ namespace Mana.Cards.Client
                     Barcode = item[0],
                     Title = item[1],
                     Category = item[2],
-                    Quantity = Int32.Parse(item[3]),
+                    Quantity = Decimal.Parse(item[3]),
                     Price = Decimal.Parse(item[4])
                 };
         }
