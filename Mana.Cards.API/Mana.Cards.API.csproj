@@ -60,6 +60,7 @@
     <Compile Include="Exceptions\CardNotFoundException.cs" />
     <Compile Include="Exceptions\MorePointsRequiredException.cs" />
     <Compile Include="Exceptions\NotEnoughPointsAvailableException.cs" />
+    <Compile Include="Exceptions\SaleAlreadyCanceledException.cs" />
     <Compile Include="Exceptions\SaleAlreadySubmittedException.cs" />
     <Compile Include="Exceptions\UnauthorizedCancellationException.cs" />
     <Compile Include="Helpers\APIHeadersHelper.cs" />

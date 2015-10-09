@@ -205,7 +205,7 @@ namespace Mana.Cards.Client
                     {
 
                         var print = new CouponPrinter(this.SaleInfo, couponsPath, txtClientName.Text,
-                           txtAvailablePoints.Text, lblTotalDiscount.Text, txtCardBarcode.Text, openCouponFile, printCouponOnCollect, printCouponOnReedem);
+                           this.SaleInfo.AvailablePoints.ToString(), lblTotalDiscount.Text, txtCardBarcode.Text, openCouponFile, printCouponOnCollect, printCouponOnReedem);
 
                     }
 
@@ -243,6 +243,14 @@ namespace Mana.Cards.Client
                 {
                     MetroMessageBox.Show(this, "Shitja është regjistruar lokalisht, mirëpo nuk ka arritur në server. Për shkak të kësaj, shfrytëzimi i pikëve është i pamundur. Sistemi do të provojë më vonë përsëri.", "Vërejtje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     closeForm = true;
+                }
+                catch (UnauthorizedCancellationException)
+                {
+                    MetroMessageBox.Show(this, "Numri i kartelës nuk është i njejtë me atë me të cilën është bërë shitja.", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (SaleAlreadyCanceledException)
+                {
+                    MetroMessageBox.Show(this, "Kjo shitje tashmë është anuluar", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {

@@ -53,7 +53,7 @@ namespace Mana.Cards.Client
                 graphics.DrawString(clientName, font, Brushes.Black, 180, 315);
 
                 //nr karteles
-                graphics.DrawString(cardNo, font, Brushes.Black, 260, 350);
+                graphics.DrawString(cardNo.ToUpper(), font, Brushes.Black, 260, 350);
 
 
                 //PAGESA

@@ -103,6 +103,14 @@ namespace Mana.Cards.API.Services
                                 {
                                     throw new SaleAlreadySubmittedException();
                                 }
+                                else if (code == 445)
+                                {
+                                    throw new UnauthorizedCancellationException();
+                                }
+                                else if (code == 446)
+                                {
+                                    throw new SaleAlreadyCanceledException();
+                                }
                                 else
                                 {
                                     throw new Exception("Validation exception");
@@ -182,7 +190,56 @@ namespace Mana.Cards.API.Services
             }
         }
 
+        public bool CancelSale(UInt64 id)
+        {
+            var url = String.Format("{0}/{1}/cancel", Config.SalesEndpointURL, id);
 
+            var request = System.Net.WebRequest.Create(url) as System.Net.HttpWebRequest;
+            request.KeepAlive = true;
+
+            request.Method = "POST";
+
+            request.ContentType = "application/json";
+
+
+            APIHeadersHelper.InjectAPIHeaders(request.Headers);
+
+            try
+            {
+                string responseContent = null;
+                using (var response = request.GetResponse() as System.Net.HttpWebResponse)
+                {
+                    using (var reader = new System.IO.StreamReader(response.GetResponseStream()))
+                    {
+                        responseContent = reader.ReadToEnd();
+                    }
+
+                    return true;
+                }
+            }
+            catch (WebException e)
+            {
+
+                using (WebResponse response = e.Response)
+                {
+                    HttpWebResponse httpResponse = (HttpWebResponse)response;
+
+                    if (httpResponse != null)
+                    {
+                        if (httpResponse.StatusCode == HttpStatusCode.Unauthorized)
+                        {
+                            throw new UnauthorizedCancellationException();
+                        }
+                    }
+                }
+                throw;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+ 
         public bool CancelSale(int id, string cardBarcode, string phone)
         {
             var url = String.Format("{0}/{1}?card_barcode={2}&phone={3}", Config.SalesEndpointURL, id, cardBarcode, phone);

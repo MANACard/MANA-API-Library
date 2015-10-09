@@ -97,5 +97,12 @@ namespace Mana.Cards.OfflineAPI.Services
 
             return saleService.CancelSale(id, cardBarcode, phone);
         }
+
+        public bool CancelSale(UInt64 id)
+        {
+            var saleService = new API.Services.SaleService();
+
+            return saleService.CancelSale(id);
+        }
     }
 }

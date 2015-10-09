@@ -31,5 +31,7 @@ namespace Mana.Cards.API.Services
         /// <param name="phone"></param>
         /// <returns></returns>
         bool CancelSale(int id, string cardBarcode, string phone);
+
+        bool CancelSale(UInt64 id);
     }
 }

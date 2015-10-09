@@ -12,6 +12,14 @@ namespace Mana.Cards.API.Domain
         {
             Redeem = new ReedemAction();
         }
+
+        /// <summary>
+        /// Put here the transaction id of the sale you want to overwrite.
+        /// </summary>
+        [JsonProperty("sale_id", NullValueHandling = NullValueHandling.Ignore)]
+        public UInt64? Id { get; set; }
+
+
         [JsonProperty("card_barcode")]
         public string CardBarcode
         {

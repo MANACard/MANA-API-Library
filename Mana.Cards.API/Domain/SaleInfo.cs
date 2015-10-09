@@ -14,6 +14,12 @@ namespace Mana.Cards.API.Domain
             get;
             set;
         }
+        [JsonProperty("available_points")]
+        public decimal AvailablePoints
+        {
+            get;
+            set;
+        }
         [JsonProperty("total")]
         public decimal Total
         {
