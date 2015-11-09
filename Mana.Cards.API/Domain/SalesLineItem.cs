@@ -42,5 +42,12 @@ namespace Mana.Cards.API.Domain
             get;
             set;
         }
+
+        [JsonProperty("vat")]
+        public int Vat
+        {
+            get;
+            set;
+        }
     }
 }

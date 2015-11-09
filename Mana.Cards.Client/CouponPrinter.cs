@@ -69,7 +69,12 @@ namespace Mana.Cards.Client
                 font, Brushes.Black, 580, 600);
 
                 //GJENDJA E PIKEVE
-                graphics.DrawString(actualPoint,
+
+                var availablePoints = Convert.ToInt32(actualPoint);
+
+                var previousPoints = (availablePoints + saleInfo.RedeemedPoints) - saleInfo.RewardedPoints;
+
+                graphics.DrawString(previousPoints.ToString(),
                   new Font("Arial", 7, FontStyle.Bold), Brushes.Black, 580, 770);
 
                 //PIKE TE PERDORURA
@@ -82,13 +87,8 @@ namespace Mana.Cards.Client
                 graphics.DrawString(saleInfo.RewardedPoints.ToString(), font, Brushes.Black, 580, 855);
 
                 //GJENDJA E RE E PIKEVE
-                var availablePoints = Convert.ToInt32(actualPoint);
-                int reedemedPoint = 0;
-                var hasreedemedPoint = int.TryParse(saleInfo.RedeemedPoints.ToString(), out reedemedPoint);
-                var acctualPoints = (availablePoints - reedemedPoint) + saleInfo.RewardedPoints;
-
               
-                graphics.DrawString(acctualPoints.ToString(),
+                graphics.DrawString(actualPoint,
                     new Font("Arial", 7, FontStyle.Bold), Brushes.Black, 580, 895);
 
 

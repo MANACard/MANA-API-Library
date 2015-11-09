@@ -44,7 +44,7 @@ namespace Mana.Cards.Client
 
                         APISession.Instance.POSUSer = posUser;
                     }
-                 ///   sale.Id = 124553539838; 
+                   // sale.Id = 794181480135; 
 
                     //ag pass the filename also
                     Application.Run(new SalesForm(sale, Path.GetDirectoryName(path), path));

@@ -26,5 +26,8 @@ namespace Mana.Cards.API.Domain
         [JsonProperty("mana_commission")]
         public decimal ManaCommission { get; set; }
 
+        [JsonProperty("vat")]
+        public int Vat { get; set; }
+
     }
 }
