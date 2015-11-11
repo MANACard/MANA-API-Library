@@ -131,6 +131,11 @@ namespace Mana.Cards.Client
                 btnSalesCancellation.Visible = false;
             }
 
+
+            if (sale.Id.HasValue)
+            {
+                editModeLbl.Visible = true;
+            }
             pnlOfflineSales.Visible = metroLabel7.Visible = lblUnsynced.Visible = Config.EnableOfflineAPI;
             btnFinishSale.Enabled = !DisableSale;
         }
@@ -177,7 +182,10 @@ namespace Mana.Cards.Client
                         string[] obj = new string[] { this.SaleInfo.Id.ToString(), 
                             this.SaleInfo.RedeemedMonetaryValue.ToString(), 
                             this.SaleInfo.RedeemedPoints.ToString(), 
-                            this.SaleInfo.RewardedPoints.ToString(), this.SaleInfo.Total.ToString() };
+                            this.SaleInfo.RewardedPoints.ToString(), 
+                            this.SaleInfo.Total.ToString(),
+                            this.SaleInfo.RewardedValue.ToString(),
+                            this.SaleInfo.DiscountValue.ToString()};
 
                         string o = string.Join(",", obj);
 
@@ -255,6 +263,7 @@ namespace Mana.Cards.Client
                 catch (Exception ex)
                 {
                     MetroMessageBox.Show(this, ex.Message, "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Environment.Exit(500);
                 }
 
                 if (closeForm)

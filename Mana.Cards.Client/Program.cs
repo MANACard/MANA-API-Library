@@ -1,6 +1,8 @@
 ﻿using Mana.Cards.API;
 using Mana.Cards.API.Domain;
+using Mana.Cards.API.Exceptions;
 using Mana.Cards.API.Providers;
+using Mana.Cards.API.Services;
 using StructureMap;
 using StructureMap.Exceptions;
 using System;
@@ -33,30 +35,65 @@ namespace Mana.Cards.Client
             }
             catch (StructureMapConfigurationException e)
             {
-                try
-                {
-                    string path = args[0];
-                    var sale = SaleLineItemsParser.GetSale(path);
-
-                    if (args.Length > 1)
-                    {
-                        string posUser = args[1];
-
-                        APISession.Instance.POSUSer = posUser;
-                    }
-                   // sale.Id = 794181480135; 
-
-                    //ag pass the filename also
-                    Application.Run(new SalesForm(sale, Path.GetDirectoryName(path), path));
-                }
-                catch (Exception)
+                if (args.Length == 0)
                 {
                     Application.Run(new SalesCancellationForm());
+                }
+                else
+                {
+                    if (args[0].ToLower() == "cancel")
+                    {
+                        ulong transactionId = 0;
+
+                        UInt64.TryParse(args[1], out transactionId);
+
+                        if (transactionId == 0)
+                        {
+                            MessageBox.Show("ID e shitjes eshte jo-valide", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            ISaleService service = new SaleService();
+
+                            try
+                            {
+                                bool result = service.CancelSale(transactionId);
+
+                                if (result)
+                                {
+                                    Environment.Exit(0);
+                                }
+                                else
+                                {
+                                    Environment.Exit(500);
+                                }
+                            }
+                            catch (UnauthorizedCancellationException)
+                            {
+                                Environment.Exit(403);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string path = args[0];
+                        var sale = SaleLineItemsParser.GetSale(path);
+
+                        if (args.Length > 1)
+                        {
+                            ulong transactionId = 0;
+
+                            UInt64.TryParse(args[1], out transactionId);
+                            sale.Id = transactionId;
+                        }
+                        Application.Run(new SalesForm(sale, Path.GetDirectoryName(path), path));
+                    }
                 }
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+                Environment.Exit(500);
             }
 
         }

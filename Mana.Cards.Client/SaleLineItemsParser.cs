@@ -35,13 +35,17 @@ namespace Mana.Cards.Client
 
         public static SalesLineItem GetSalesLineItem(string[] item)
         {
+            int vat = 0;
+            Int32.TryParse(item.Length > 5 ? item[5] : "0", out vat);
+
             return new SalesLineItem
                 {
                     Barcode = item[0],
                     Title = item[1],
                     Category = item[2],
                     Quantity = Decimal.Parse(item[3]),
-                    Price = Decimal.Parse(item[4])
+                    Price = Decimal.Parse(item[4]),
+                    Vat = vat
                 };
         }
     }

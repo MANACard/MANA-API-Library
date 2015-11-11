@@ -37,6 +37,8 @@ namespace Mana.Cards.Client
 
 
             gridSales.Columns["Id"].Visible = false;
+            gridSales.Columns["TransactionId"].HeaderText = "ID";
+
             gridSales.Columns["Total"].HeaderText = "Totali";
             gridSales.Columns["TotalPaid"].HeaderText = "Totali i paguar";
             gridSales.Columns["Date"].HeaderText = "Data";

@@ -11,6 +11,9 @@ namespace Mana.Cards.API.Domain
         [JsonProperty("id")]
         public int Id { get; set; }
 
+        [JsonProperty("transaction_id")]
+        public ulong TransactionId { get; set; }
+
         [JsonProperty("total")]
         public decimal Total { get; set; }
 

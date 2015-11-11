@@ -232,11 +232,11 @@ namespace Mana.Cards.API.Services
                         }
                     }
                 }
-                throw;
+                return false;
             }
             catch (Exception e)
             {
-                throw;
+                return false;
             }
         }
  

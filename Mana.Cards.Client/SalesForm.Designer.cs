@@ -65,6 +65,7 @@
             this.clientRegistrationControl1 = new Mana.Cards.Client.ClientRegistrationControl();
             this.btnSalesCancellation = new MetroFramework.Controls.MetroButton();
             this.lblPartnerName = new MetroFramework.Controls.MetroLabel();
+            this.editModeLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -495,11 +496,24 @@
             this.lblPartnerName.TabIndex = 8;
             this.lblPartnerName.Text = "MANA Partner";
             // 
+            // editModeLbl
+            // 
+            this.editModeLbl.AutoSize = true;
+            this.editModeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editModeLbl.ForeColor = System.Drawing.Color.Red;
+            this.editModeLbl.Location = new System.Drawing.Point(628, 37);
+            this.editModeLbl.Name = "editModeLbl";
+            this.editModeLbl.Size = new System.Drawing.Size(140, 13);
+            this.editModeLbl.TabIndex = 9;
+            this.editModeLbl.Text = "Duke modifikuar shitjen";
+            this.editModeLbl.Visible = false;
+            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 442);
+            this.Controls.Add(this.editModeLbl);
             this.Controls.Add(this.lblPartnerName);
             this.Controls.Add(this.btnSalesCancellation);
             this.Controls.Add(this.metroTabControl1);
@@ -564,5 +578,6 @@
         private MetroFramework.Controls.MetroButton btnSalesCancellation;
         private MetroFramework.Controls.MetroLabel lblPartnerName;
         private System.Windows.Forms.Button btnResolveCard;
+        private System.Windows.Forms.Label editModeLbl;
     }
 }
