@@ -209,13 +209,9 @@ namespace Mana.Cards.Client
                     if (!Directory.Exists(couponsPath))
                         Directory.CreateDirectory(couponsPath);
 
-                    if (printCouponOnCollect || printCouponOnReedem)
-                    {
+                    var print = new CouponPrinter(this.SaleInfo, couponsPath, txtClientName.Text,
+   this.SaleInfo.AvailablePoints.ToString(), lblTotalDiscount.Text, txtCardBarcode.Text, openCouponFile, printCouponOnCollect, printCouponOnReedem);
 
-                        var print = new CouponPrinter(this.SaleInfo, couponsPath, txtClientName.Text,
-                           this.SaleInfo.AvailablePoints.ToString(), lblTotalDiscount.Text, txtCardBarcode.Text, openCouponFile, printCouponOnCollect, printCouponOnReedem);
-
-                    }
 
                     closeForm = true;
                 }

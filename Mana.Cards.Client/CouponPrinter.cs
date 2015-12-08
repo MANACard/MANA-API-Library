@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using Mana.Cards.API.Domain;
 using Mana.Cards.Client.Properties;
+using System.Windows.Forms;
 
 namespace Mana.Cards.Client
 {
@@ -19,19 +20,19 @@ namespace Mana.Cards.Client
         private string WriteToPath { get; set; }
         private string printFilename { get; set; }
         public SaleInfo SaleInfo { get; set; }
-        
+
         #endregion
 
         #region CTORs
 
-        public CouponPrinter(SaleInfo sale, string writeToPath, string clientName, 
+        public CouponPrinter(SaleInfo sale, string writeToPath, string clientName,
             string acctualPoints, string payed, string cardNo, bool openPrintedCoupon, bool printOnCollect, bool printOnRedeem)
         {
             WriteToPath = writeToPath;
             PrintAndSave(sale, writeToPath, clientName, acctualPoints, payed, cardNo, openPrintedCoupon, printOnCollect, printOnRedeem);
         }
 
-      
+
 
         private Image PrintAndSave(SaleInfo saleInfo, string writeToPath,
             string clientName, string actualPoint, string payed, string cardNo, bool openPrintedCoupon, bool printOnCollect, bool printOnRedeem)
@@ -57,7 +58,7 @@ namespace Mana.Cards.Client
 
 
                 //PAGESA
-                graphics.DrawString(payed,font, Brushes.Black, 580, 520);
+                graphics.DrawString(payed, font, Brushes.Black, 580, 520);
 
                 //PIKET VLERA MONETARE
                 graphics.DrawString(saleInfo.RedeemedMonetaryValue.ToString("C", CultureInfo.GetCultureInfo("de-DE")),
@@ -87,28 +88,41 @@ namespace Mana.Cards.Client
                 graphics.DrawString(saleInfo.RewardedPoints.ToString(), font, Brushes.Black, 580, 855);
 
                 //GJENDJA E RE E PIKEVE
-              
+
                 graphics.DrawString(actualPoint,
                     new Font("Arial", 7, FontStyle.Bold), Brushes.Black, 580, 895);
 
 
+                bool exists = System.IO.Directory.Exists(writeToPath);
+
+                if (!exists)
+                {
+                    try
+                    {
+                        System.IO.Directory.CreateDirectory(writeToPath);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Nuk mund te krijohet folderi: " + writeToPath + ". Ju lutemi krijojeni ate manualisht, ne menyre qe te ruhen kuponat.");
+                    }
+                }
                 // ruje qele printo ne default printer
                 var filename = Path.Combine(writeToPath, string.Format("{0}.jpg", saleInfo.Id));
                 printFilename = filename;
 
                 bitmap.Save(filename);
 
-                
+
 
 
                 if (saleInfo.RedeemedPoints != 0 && printOnRedeem)
                 {
-                     PrintDocument pd = new PrintDocument();
-                     pd.PrintPage += PrintPageEvent;
-                     pd.Print();
-                    
+                    PrintDocument pd = new PrintDocument();
+                    pd.PrintPage += PrintPageEvent;
+                    pd.Print();
+
                     if (openPrintedCoupon)
-                         Process.Start(filename);
+                        Process.Start(filename);
                 }
                 else if (printOnCollect)
                 {
@@ -120,11 +134,11 @@ namespace Mana.Cards.Client
                         Process.Start(filename);
                 }
 
-                
+
 
 
                 //print
-               
+
 
             }
             return bitmap;
@@ -138,8 +152,8 @@ namespace Mana.Cards.Client
             Image img = Image.FromFile(printFilename);
             Point loc = new Point(0, 0);
             e.Graphics.DrawImage(img, loc);
-            e.Graphics.DrawImage(img, 0,650);
-            
+            e.Graphics.DrawImage(img, 0, 650);
+
         }
 
     }
