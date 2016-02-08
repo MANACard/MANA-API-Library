@@ -8,6 +8,12 @@ namespace Mana.Cards.API.Domain
 {
     public class SalesLineItem
     {
+        [JsonProperty("item_identifier")]
+        public string ItemIdentifier
+        {
+            get;
+            set;
+        }
         [JsonProperty("barcode")]
         public string Barcode
         {
