@@ -32,6 +32,12 @@ namespace Mana.Cards.API.Domain
             get;
             set;
         }
+        [JsonProperty("actual_rewarded_points")]
+        public decimal ActualRewardedPoints
+        {
+            get;
+            set;
+        }
 
         [JsonProperty("rewarded_value")]
         public decimal RewardedValue
@@ -46,6 +52,13 @@ namespace Mana.Cards.API.Domain
             get;
             set;
         }
+        [JsonProperty("actual_redeemed_points")]
+        public decimal ActualRedeemedPoints
+        {
+            get;
+            set;
+        }
+
         [JsonProperty("redeemed_value")]
         public decimal RedeemedMonetaryValue
         {
