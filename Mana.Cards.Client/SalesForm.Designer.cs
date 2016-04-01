@@ -41,7 +41,6 @@
             this.lblTotal = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.btnResolveCard = new System.Windows.Forms.Button();
             this.txtClientName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.lblMinPoints = new MetroFramework.Controls.MetroLabel();
@@ -66,6 +65,8 @@
             this.btnSalesCancellation = new MetroFramework.Controls.MetroButton();
             this.lblPartnerName = new MetroFramework.Controls.MetroLabel();
             this.editModeLbl = new System.Windows.Forms.Label();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -85,8 +86,8 @@
             // 
             this.metroButton1.Location = new System.Drawing.Point(0, 0);
             this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 0;
-            this.metroButton1.UseSelectable = true;
             // 
             // pictureBox1
             // 
@@ -100,7 +101,6 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroPanel1.Controls.Add(this.btnFinishSale);
             this.metroPanel1.Controls.Add(this.metroPanel3);
             this.metroPanel1.Controls.Add(this.metroPanel2);
@@ -122,7 +122,6 @@
             this.btnFinishSale.Size = new System.Drawing.Size(103, 23);
             this.btnFinishSale.TabIndex = 4;
             this.btnFinishSale.Text = "Përfundo shitjen";
-            this.btnFinishSale.UseSelectable = true;
             this.btnFinishSale.Click += new System.EventHandler(this.btnFinishSale_Click);
             // 
             // metroPanel3
@@ -156,8 +155,6 @@
             this.lblTotalDiscount.TabIndex = 5;
             this.lblTotalDiscount.Text = "€ 45.35";
             this.lblTotalDiscount.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblTotalDiscount.UseCustomBackColor = true;
-            this.lblTotalDiscount.UseCustomForeColor = true;
             this.lblTotalDiscount.UseStyleColors = true;
             // 
             // metroLabel8
@@ -192,7 +189,7 @@
             // 
             // metroPanel2
             // 
-            this.metroPanel2.Controls.Add(this.btnResolveCard);
+            this.metroPanel2.Controls.Add(this.metroButton3);
             this.metroPanel2.Controls.Add(this.txtClientName);
             this.metroPanel2.Controls.Add(this.metroLabel9);
             this.metroPanel2.Controls.Add(this.lblMinPoints);
@@ -217,29 +214,13 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // btnResolveCard
-            // 
-            this.btnResolveCard.Location = new System.Drawing.Point(292, 7);
-            this.btnResolveCard.Name = "btnResolveCard";
-            this.btnResolveCard.Size = new System.Drawing.Size(75, 23);
-            this.btnResolveCard.TabIndex = 15;
-            this.btnResolveCard.Text = "Gjej kartelën";
-            this.btnResolveCard.UseVisualStyleBackColor = true;
-            this.btnResolveCard.Click += new System.EventHandler(this.btnResolveCard_Click);
-            // 
             // txtClientName
             // 
             this.txtClientName.Enabled = false;
-            this.txtClientName.Lines = new string[0];
             this.txtClientName.Location = new System.Drawing.Point(139, 53);
-            this.txtClientName.MaxLength = 32767;
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.PasswordChar = '\0';
-            this.txtClientName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtClientName.SelectedText = "";
             this.txtClientName.Size = new System.Drawing.Size(147, 23);
             this.txtClientName.TabIndex = 14;
-            this.txtClientName.UseSelectable = true;
             // 
             // metroLabel9
             // 
@@ -277,22 +258,15 @@
             this.cardProgress.Size = new System.Drawing.Size(32, 23);
             this.cardProgress.Style = MetroFramework.MetroColorStyle.Purple;
             this.cardProgress.TabIndex = 10;
-            this.cardProgress.UseSelectable = true;
             this.cardProgress.Visible = false;
             // 
             // txtRedeemValue
             // 
             this.txtRedeemValue.Enabled = false;
-            this.txtRedeemValue.Lines = new string[0];
             this.txtRedeemValue.Location = new System.Drawing.Point(139, 169);
-            this.txtRedeemValue.MaxLength = 32767;
             this.txtRedeemValue.Name = "txtRedeemValue";
-            this.txtRedeemValue.PasswordChar = '\0';
-            this.txtRedeemValue.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtRedeemValue.SelectedText = "";
             this.txtRedeemValue.Size = new System.Drawing.Size(67, 23);
             this.txtRedeemValue.TabIndex = 9;
-            this.txtRedeemValue.UseSelectable = true;
             this.txtRedeemValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRedeemValue_KeyPress);
             this.txtRedeemValue.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtRedeemValue_KeyUp);
             // 
@@ -308,16 +282,10 @@
             // txtRedeemPoints
             // 
             this.txtRedeemPoints.Enabled = false;
-            this.txtRedeemPoints.Lines = new string[0];
             this.txtRedeemPoints.Location = new System.Drawing.Point(139, 130);
-            this.txtRedeemPoints.MaxLength = 32767;
             this.txtRedeemPoints.Name = "txtRedeemPoints";
-            this.txtRedeemPoints.PasswordChar = '\0';
-            this.txtRedeemPoints.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtRedeemPoints.SelectedText = "";
             this.txtRedeemPoints.Size = new System.Drawing.Size(67, 23);
             this.txtRedeemPoints.TabIndex = 7;
-            this.txtRedeemPoints.UseSelectable = true;
             this.txtRedeemPoints.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRedeemPoints_KeyPress);
             this.txtRedeemPoints.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtRedeemPoints_KeyUp);
             // 
@@ -334,17 +302,11 @@
             // 
             this.txtAvailablePoints.Enabled = false;
             this.txtAvailablePoints.ForeColor = System.Drawing.Color.Red;
-            this.txtAvailablePoints.Lines = new string[0];
             this.txtAvailablePoints.Location = new System.Drawing.Point(139, 92);
-            this.txtAvailablePoints.MaxLength = 32767;
             this.txtAvailablePoints.Name = "txtAvailablePoints";
-            this.txtAvailablePoints.PasswordChar = '\0';
             this.txtAvailablePoints.ReadOnly = true;
-            this.txtAvailablePoints.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtAvailablePoints.SelectedText = "";
             this.txtAvailablePoints.Size = new System.Drawing.Size(67, 23);
             this.txtAvailablePoints.TabIndex = 5;
-            this.txtAvailablePoints.UseSelectable = true;
             // 
             // metroLabel2
             // 
@@ -357,16 +319,10 @@
             // 
             // txtCardBarcode
             // 
-            this.txtCardBarcode.Lines = new string[0];
             this.txtCardBarcode.Location = new System.Drawing.Point(139, 7);
-            this.txtCardBarcode.MaxLength = 32767;
             this.txtCardBarcode.Name = "txtCardBarcode";
-            this.txtCardBarcode.PasswordChar = '\0';
-            this.txtCardBarcode.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCardBarcode.SelectedText = "";
             this.txtCardBarcode.Size = new System.Drawing.Size(147, 23);
             this.txtCardBarcode.TabIndex = 3;
-            this.txtCardBarcode.UseSelectable = true;
             this.txtCardBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCardBarcode_KeyDown);
             // 
             // metroLabel1
@@ -393,7 +349,6 @@
             this.lblUnsynced.Size = new System.Drawing.Size(16, 19);
             this.lblUnsynced.TabIndex = 2;
             this.lblUnsynced.Text = "0";
-            this.lblUnsynced.UseCustomForeColor = true;
             this.lblUnsynced.Click += new System.EventHandler(this.lblUnsynced_Click);
             // 
             // metroLabel7
@@ -407,7 +362,6 @@
             // 
             // pnlOfflineSales
             // 
-            this.pnlOfflineSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlOfflineSales.HorizontalScrollbarBarColor = true;
             this.pnlOfflineSales.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlOfflineSales.HorizontalScrollbarSize = 10;
@@ -425,12 +379,10 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Location = new System.Drawing.Point(24, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.Padding = new System.Drawing.Point(6, 8);
             this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(753, 334);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.White;
             this.metroTabControl1.TabIndex = 5;
-            this.metroTabControl1.UseSelectable = true;
             // 
             // salesDetails
             // 
@@ -438,35 +390,24 @@
             this.salesDetails.Controls.Add(this.lblUnsynced);
             this.salesDetails.Controls.Add(this.metroPanel1);
             this.salesDetails.Controls.Add(this.pnlOfflineSales);
-            this.salesDetails.Enabled = true;
             this.salesDetails.HorizontalScrollbarBarColor = true;
-            this.salesDetails.HorizontalScrollbarHighlightOnWheel = false;
-            this.salesDetails.HorizontalScrollbarSize = 10;
-            this.salesDetails.Location = new System.Drawing.Point(4, 38);
+            this.salesDetails.Location = new System.Drawing.Point(4, 35);
             this.salesDetails.Name = "salesDetails";
-            this.salesDetails.Size = new System.Drawing.Size(745, 292);
+            this.salesDetails.Size = new System.Drawing.Size(745, 295);
             this.salesDetails.TabIndex = 0;
             this.salesDetails.Text = "Shitja";
             this.salesDetails.VerticalScrollbarBarColor = true;
-            this.salesDetails.VerticalScrollbarHighlightOnWheel = false;
-            this.salesDetails.VerticalScrollbarSize = 10;
-            this.salesDetails.Visible = true;
             // 
             // metroTabPage1
             // 
             this.metroTabPage1.Controls.Add(this.clientRegistrationControl1);
-            this.metroTabPage1.Enabled = true;
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(745, 292);
+            this.metroTabPage1.Size = new System.Drawing.Size(745, 295);
             this.metroTabPage1.TabIndex = 1;
             this.metroTabPage1.Text = "Regjistrimi i klientit";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
             this.metroTabPage1.Visible = false;
             // 
             // clientRegistrationControl1
@@ -484,7 +425,6 @@
             this.btnSalesCancellation.Size = new System.Drawing.Size(103, 23);
             this.btnSalesCancellation.TabIndex = 6;
             this.btnSalesCancellation.Text = "Anulimi i shitjeve";
-            this.btnSalesCancellation.UseSelectable = true;
             this.btnSalesCancellation.Click += new System.EventHandler(this.btnSalesCancellation_Click);
             // 
             // lblPartnerName
@@ -508,11 +448,30 @@
             this.editModeLbl.Text = "Duke modifikuar shitjen";
             this.editModeLbl.Visible = false;
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(521, 396);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(138, 23);
+            this.metroButton2.TabIndex = 10;
+            this.metroButton2.Text = "Kam harruar kartelën";
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(292, 7);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(86, 23);
+            this.metroButton3.TabIndex = 15;
+            this.metroButton3.Text = "Gjej kartelën";
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 442);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.editModeLbl);
             this.Controls.Add(this.lblPartnerName);
             this.Controls.Add(this.btnSalesCancellation);
@@ -521,7 +480,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SalesForm";
-            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Shitje përmes";
             this.Load += new System.EventHandler(this.SalesForm_Load);
@@ -577,7 +535,8 @@
         private ClientRegistrationControl clientRegistrationControl1;
         private MetroFramework.Controls.MetroButton btnSalesCancellation;
         private MetroFramework.Controls.MetroLabel lblPartnerName;
-        private System.Windows.Forms.Button btnResolveCard;
         private System.Windows.Forms.Label editModeLbl;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }

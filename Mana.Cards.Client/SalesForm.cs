@@ -315,7 +315,6 @@ namespace Mana.Cards.Client
                 backgroundWorker1.RunWorkerAsync();
             }
         }
-
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             try
@@ -419,6 +418,11 @@ namespace Mana.Cards.Client
 
         private void btnResolveCard_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
             var form = new CardResolverForm();
 
             var result = form.ShowDialog();
@@ -432,6 +436,14 @@ namespace Mana.Cards.Client
 
 
             }
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            cardProgress.Show();
+            txtRedeemPoints.Enabled = false;
+            txtRedeemValue.Enabled = false;
+            backgroundWorker1.RunWorkerAsync();
         }
     }
 }
