@@ -107,7 +107,16 @@ namespace Mana.Cards.Client
                     }
                 }
                 // ruje qele printo ne default printer
-                var filename = Path.Combine(writeToPath, string.Format("{0}.jpg", saleInfo.Id));
+
+                string couponFileName = string.Format("grumbullim-{0}.jpg", saleInfo.Id);
+
+
+                if (saleInfo.RedeemedPoints > 0)
+                {
+                    couponFileName = string.Format("shfrytezim-{0}.jpg", saleInfo.Id);
+                }
+
+                var filename = Path.Combine(writeToPath, couponFileName);
                 printFilename = filename;
 
                 bitmap.Save(filename);
