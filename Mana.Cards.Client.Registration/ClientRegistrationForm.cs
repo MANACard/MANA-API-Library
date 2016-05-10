@@ -14,7 +14,7 @@ namespace Mana.Cards.Client.Registration
     public partial class ClientRegistrationForm : MetroForm
     {
         public ClientRegistrationForm()
-        {
+        {  
             InitializeComponent();
         }
 
