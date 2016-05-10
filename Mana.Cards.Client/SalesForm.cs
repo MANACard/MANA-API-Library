@@ -19,6 +19,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Mana.Cards.Client
 {
@@ -41,12 +42,16 @@ namespace Mana.Cards.Client
 
         public RedeemRule RedeemRule { get; set; }
 
+     
+
         #endregion
 
         #region CTORs
         public SalesForm(string[][] SaleData)
         {
             InitializeComponent();
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
+            this.BackColor = Color.FromArgb(198, 191, 185);
             WireUpEvents();
 
             sale = GetSale(SaleData);
@@ -57,6 +62,8 @@ namespace Mana.Cards.Client
         public SalesForm(List<SalesLineItem> items)
         {
             InitializeComponent();
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
+            this.BackColor = Color.FromArgb(198, 191, 185);
             WireUpEvents();
 
             this.sale = new Sale()
@@ -69,6 +76,11 @@ namespace Mana.Cards.Client
         public SalesForm(Sale sale, string writeToPath, string salesFileName, bool externalRedeem = false, bool disableCancellation = false, bool disableSale = false)
         {
             InitializeComponent();
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
+       
+           
+          
+            this.BackColor = Color.FromArgb(198, 191, 185);
             WireUpEvents();
 
             this.sale = sale;
@@ -85,6 +97,8 @@ namespace Mana.Cards.Client
         public SalesForm(Sale sale, bool externalRedeem = false, bool disableCancellation = false, bool disableSale = false)
         {
             InitializeComponent();
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
+            this.BackColor = Color.FromArgb(198, 191, 185);
             WireUpEvents();
 
             this.sale = sale;
@@ -94,10 +108,24 @@ namespace Mana.Cards.Client
 
             this.Initialize();
         }
-        #endregion
+
+     
+        
+
+    [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+    private static extern IntPtr CreateRoundRectRgn
+    (
+            int nLeftRect,          // x-coordinate of upper-left corner
+            int nTopRect,               // y-coordinate of upper-left corner
+            int nRightRect,         // x-coordinate of lower-right corner
+            int nBottomRect,        // y-coordinate of lower-right corner
+            int nWidthEllipse,  // height of ellipse
+            int nHeightEllipse  // width of ellipse
+    );
+    #endregion
 
         #region Initialize
-        private void Initialize()
+    private void Initialize()
         {
             this.RandomToken = RandomTokenHelper.GenerateToken();
             lblTotal.Text = lblTotalDiscount.Text = sale.Total.ToString("C" + Config.DecimalScale, CultureInfo.GetCultureInfo("de-DE"));
@@ -140,6 +168,7 @@ namespace Mana.Cards.Client
             btnFinishSale.Enabled = !DisableSale;
         }
         #endregion
+
         #region GetSale
         private Sale GetSale(string[][] SaleData)
         {
@@ -154,6 +183,7 @@ namespace Mana.Cards.Client
             return theSale;
         }
         #endregion
+
         #region SubmitSale
         private void SubmitSale()
         {
@@ -274,6 +304,7 @@ namespace Mana.Cards.Client
             }
         }
         #endregion
+
         #region ValidateFields
         private bool ValidateFields()
         {
@@ -285,6 +316,7 @@ namespace Mana.Cards.Client
             return true;
         }
         #endregion
+
         #region UI Events
 
         private void WireUpEvents()
@@ -301,6 +333,10 @@ namespace Mana.Cards.Client
             lblUnsynced.Text = new SyncService().GetUnsyncedCount().ToString();
             txtCardBarcode.Select();
             this.lblPartnerName.Text = AuthenticationHelper.GetPartnerName();
+            this.BringToFront();
+            this.Focus();
+            txtCardBarcode.Focus();
+      
         }
 
 
@@ -312,6 +348,7 @@ namespace Mana.Cards.Client
                 txtRedeemPoints.Enabled = false;
                 txtRedeemValue.Enabled = false;
                 e.SuppressKeyPress = true;
+                if(!backgroundWorker1.IsBusy)
                 backgroundWorker1.RunWorkerAsync();
             }
         }
@@ -414,8 +451,6 @@ namespace Mana.Cards.Client
 
             form.Show();
         }
-        #endregion
-
         private void btnResolveCard_Click(object sender, EventArgs e)
         {
 
@@ -443,7 +478,50 @@ namespace Mana.Cards.Client
             cardProgress.Show();
             txtRedeemPoints.Enabled = false;
             txtRedeemValue.Enabled = false;
-            backgroundWorker1.RunWorkerAsync();
+            if (!backgroundWorker1.IsBusy)
+                backgroundWorker1.RunWorkerAsync();
         }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            ChangeSelectedButton(true);
+        }
+
+
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            ChangeSelectedButton(false);
+        }
+        #endregion
+
+        #region Methods
+        private void ChangeSelectedButton(bool SalesMode)
+        {
+
+            btnSale.ForeColor = SalesMode ? Color.White : Color.FromArgb(182, 31, 67);
+            btnSale.BackColor = SalesMode ? Color.FromArgb(182, 31, 67) : Color.Transparent;
+            btnAddClient.ForeColor = SalesMode ? Color.FromArgb(182, 31, 67) : Color.White;
+            btnAddClient.BackColor = SalesMode ? Color.Transparent : Color.FromArgb(182, 31, 67);
+            rpAddClient.GradientStartColor = SalesMode ? Color.Transparent : Color.FromArgb(182, 31, 67);
+            rpAddClient.GradientEndColor = SalesMode ? Color.Transparent : Color.FromArgb(182, 31, 67);
+            rpSale.GradientStartColor = SalesMode ? Color.FromArgb(182, 31, 67) : Color.Transparent;
+            rpSale.GradientEndColor = SalesMode ? Color.FromArgb(182, 31, 67) : Color.Transparent;
+
+            splitContainer1.Panel1Collapsed = !SalesMode;
+            splitContainer1.Panel2Collapsed = SalesMode;
+            if (!SalesMode)
+            {
+                clientRegistrationControl1.Focus();
+                clientRegistrationControl1.firstName.Focus();
+
+            }
+            else
+            {
+                txtCardBarcode.Focus();
+            }
+
+        }
+        #endregion
     }
 }

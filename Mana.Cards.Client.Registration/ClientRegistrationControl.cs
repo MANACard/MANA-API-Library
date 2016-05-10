@@ -40,7 +40,7 @@ namespace Mana.Cards.Client
 
         private void ClientRegistrationControl_Load(object sender, EventArgs e)
         {
-            city.BackColor = Color.FromArgb(238, 238, 238);
+          //  city.BackColor = Color.FromArgb(238, 238, 238);
             city.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             city.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
 
@@ -49,6 +49,8 @@ namespace Mana.Cards.Client
             backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
 
             InitGenders();
+       
+          
         }
 
         void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
