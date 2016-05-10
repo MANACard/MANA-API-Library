@@ -134,6 +134,9 @@
     <EmbeddedResource Include="SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TransactionAmountForm.resx">
+      <DependentUpon>TransactionAmountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UnsyncedSalesForm.resx">
       <DependentUpon>UnsyncedSalesForm.cs</DependentUpon>
     </EmbeddedResource>

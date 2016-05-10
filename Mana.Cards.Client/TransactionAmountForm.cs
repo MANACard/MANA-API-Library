@@ -1,6 +1,8 @@
 ﻿using Mana.Cards.API.Domain;
 using Mana.Cards.API.Exceptions;
+using Mana.Cards.API.Helpers;
 using Mana.Cards.API.Services;
+using Mana.Cards.Client.CostumControls;
 using MetroFramework;
 using MetroFramework.Forms;
 using System;
@@ -17,11 +19,16 @@ namespace Mana.Cards.Client
 {
     public partial class TransactionAmountForm : MetroForm
     {
+
+        public Sale Sale; 
+
         #region CTOR
         public TransactionAmountForm()
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
+
+            Sale = new Sale();
         }
 
 
@@ -46,10 +53,26 @@ namespace Mana.Cards.Client
             }
 
             // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            if ((e.KeyChar == '.') && ((sender as RoundedTextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            Sale.Items = new List<SalesLineItem>();
+
+            Sale.Items.Add(new SalesLineItem { 
+                Barcode = Config.DefaultProductBarcode,
+                Quantity = 1,
+                Price = Decimal.Parse(txtPhone.Text),
+                Title = Config.DefaultProductTitle
+            });
+
+            this.DialogResult = DialogResult.OK;
+
+            this.Close();
         }
 
     }

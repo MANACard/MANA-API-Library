@@ -1,6 +1,7 @@
 ﻿using Mana.Cards.API;
 using Mana.Cards.API.Domain;
 using Mana.Cards.API.Exceptions;
+using Mana.Cards.API.Helpers;
 using Mana.Cards.API.Providers;
 using Mana.Cards.API.Services;
 using StructureMap;
@@ -37,7 +38,27 @@ namespace Mana.Cards.Client
             {
                 if (args.Length == 0)
                 {
-                    Application.Run(new SalesCancellationForm());
+                    if (Config.SpecifyTransactionAmount)
+                    {
+                        var frm = new TransactionAmountForm();
+                        var result = frm.ShowDialog();
+
+                        if (result == DialogResult.OK)
+                        {
+
+                            var sale = frm.Sale;
+
+
+                            Application.Run(new SalesForm(sale));
+                        }
+                       
+                    }
+                    else
+                    {
+                        Application.Run(new SalesCancellationForm());
+                    }
+
+
                 }
                 else
                 {

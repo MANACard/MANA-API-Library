@@ -35,7 +35,7 @@ namespace Mana.Cards.Client
             this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.btnFindCard = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
             this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel1.SuspendLayout();
@@ -124,7 +124,7 @@ namespace Mana.Cards.Client
             this.roundedPanel11.BackColor = System.Drawing.Color.Transparent;
             this.roundedPanel11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
             this.roundedPanel11.BorderWidth = 2;
-            this.roundedPanel11.Controls.Add(this.btnFindCard);
+            this.roundedPanel11.Controls.Add(this.btnContinue);
             this.roundedPanel11.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
             this.roundedPanel11.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
             this.roundedPanel11.Image = null;
@@ -135,21 +135,22 @@ namespace Mana.Cards.Client
             this.roundedPanel11.Size = new System.Drawing.Size(125, 34);
             this.roundedPanel11.TabIndex = 38;
             // 
-            // btnFindCard
+            // btnContinue
             // 
-            this.btnFindCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.btnFindCard.FlatAppearance.BorderSize = 0;
-            this.btnFindCard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.btnFindCard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnFindCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFindCard.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindCard.ForeColor = System.Drawing.Color.White;
-            this.btnFindCard.Location = new System.Drawing.Point(3, 3);
-            this.btnFindCard.Name = "btnFindCard";
-            this.btnFindCard.Size = new System.Drawing.Size(112, 23);
-            this.btnFindCard.TabIndex = 0;
-            this.btnFindCard.Text = "Vazhdo";
-            this.btnFindCard.UseVisualStyleBackColor = false;
+            this.btnContinue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.btnContinue.FlatAppearance.BorderSize = 0;
+            this.btnContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinue.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinue.ForeColor = System.Drawing.Color.White;
+            this.btnContinue.Location = new System.Drawing.Point(3, 3);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(112, 23);
+            this.btnContinue.TabIndex = 0;
+            this.btnContinue.Text = "Vazhdo";
+            this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // roundedPanel3
             // 
@@ -210,6 +211,6 @@ namespace Mana.Cards.Client
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private CostumControls.RoundedPanel roundedPanel3;
         private RoundedPanel roundedPanel11;
-        private System.Windows.Forms.Button btnFindCard;
+        private System.Windows.Forms.Button btnContinue;
     }
 }

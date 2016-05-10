@@ -86,5 +86,49 @@ namespace Mana.Cards.API.Helpers
             }
         }
 
+        public static bool SpecifyTransactionAmount
+        {
+            get
+            {
+                bool result = false;
+                if (ConfigurationManager.AppSettings["SpecifyTransactionAmount"] != null)
+                {
+                    Boolean.TryParse(ConfigurationManager.AppSettings["SpecifyTransactionAmount"], out result);
+                }
+
+                return result;
+            }
+        }
+
+        public static string DefaultProductBarcode
+        {
+            get
+            {
+                string result = "";
+
+                if (ConfigurationManager.AppSettings["DefaultProductBarcode"] != null)
+                {
+                    result = ConfigurationManager.AppSettings["DefaultProductBarcode"].ToString();
+                }
+
+                return result;
+            }
+        }
+
+        public static string DefaultProductTitle
+        {
+            get
+            {
+                string result = "";
+
+                if (ConfigurationManager.AppSettings["DefaultProductTitle"] != null)
+                {
+                    result = ConfigurationManager.AppSettings["DefaultProductTitle"].ToString();
+                }
+
+                return result;
+            }
+        }
+
     }
 }
