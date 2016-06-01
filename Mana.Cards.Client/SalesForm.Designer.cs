@@ -39,6 +39,9 @@ namespace Mana.Cards.Client
             this.salesDetails = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel14 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.txtEmployeeCardBarcode = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel13 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.btnSalesCancellation = new System.Windows.Forms.Button();
             this.roundedPanel12 = new Mana.Cards.Client.CostumControls.RoundedPanel();
@@ -91,6 +94,7 @@ namespace Mana.Cards.Client
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
+            this.roundedPanel14.SuspendLayout();
             this.roundedPanel13.SuspendLayout();
             this.roundedPanel12.SuspendLayout();
             this.rpAddClient.SuspendLayout();
@@ -177,6 +181,8 @@ namespace Mana.Cards.Client
             // roundedPanel1
             // 
             this.roundedPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.Controls.Add(this.roundedPanel14);
+            this.roundedPanel1.Controls.Add(this.metroLabel10);
             this.roundedPanel1.Controls.Add(this.roundedPanel13);
             this.roundedPanel1.Controls.Add(this.roundedPanel12);
             this.roundedPanel1.Controls.Add(this.rpAddClient);
@@ -195,6 +201,71 @@ namespace Mana.Cards.Client
             this.roundedPanel1.RoundCornerRadius = 20;
             this.roundedPanel1.Size = new System.Drawing.Size(839, 466);
             this.roundedPanel1.TabIndex = 0;
+            // 
+            // roundedPanel14
+            // 
+            this.roundedPanel14.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPanel14.BorderColor = System.Drawing.Color.Gray;
+            this.roundedPanel14.BorderWidth = 2;
+            this.roundedPanel14.Controls.Add(this.txtEmployeeCardBarcode);
+            this.roundedPanel14.GradientEndColor = System.Drawing.Color.White;
+            this.roundedPanel14.GradientStartColor = System.Drawing.Color.White;
+            this.roundedPanel14.Image = null;
+            this.roundedPanel14.ImageLocation = new System.Drawing.Point(4, 4);
+            this.roundedPanel14.Location = new System.Drawing.Point(33, 410);
+            this.roundedPanel14.Name = "roundedPanel14";
+            this.roundedPanel14.RoundCornerRadius = 15;
+            this.roundedPanel14.Size = new System.Drawing.Size(218, 34);
+            this.roundedPanel14.TabIndex = 26;
+            // 
+            // txtEmployeeCardBarcode
+            // 
+            this.txtEmployeeCardBarcode.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtEmployeeCardBarcode.CustomButton.Image = null;
+            this.txtEmployeeCardBarcode.CustomButton.Location = new System.Drawing.Point(185, 1);
+            this.txtEmployeeCardBarcode.CustomButton.Name = "";
+            this.txtEmployeeCardBarcode.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtEmployeeCardBarcode.CustomButton.Style = MetroFramework.MetroColorStyle.White;
+            this.txtEmployeeCardBarcode.CustomButton.TabIndex = 1;
+            this.txtEmployeeCardBarcode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtEmployeeCardBarcode.CustomButton.UseSelectable = true;
+            this.txtEmployeeCardBarcode.CustomButton.Visible = false;
+            this.txtEmployeeCardBarcode.Lines = new string[0];
+            this.txtEmployeeCardBarcode.Location = new System.Drawing.Point(3, 3);
+            this.txtEmployeeCardBarcode.MaxLength = 32767;
+            this.txtEmployeeCardBarcode.Name = "txtEmployeeCardBarcode";
+            this.txtEmployeeCardBarcode.PasswordChar = '\0';
+            this.txtEmployeeCardBarcode.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtEmployeeCardBarcode.SelectedText = "";
+            this.txtEmployeeCardBarcode.SelectionLength = 0;
+            this.txtEmployeeCardBarcode.SelectionStart = 0;
+            this.txtEmployeeCardBarcode.Size = new System.Drawing.Size(207, 23);
+            this.txtEmployeeCardBarcode.Style = MetroFramework.MetroColorStyle.White;
+            this.txtEmployeeCardBarcode.TabIndex = 0;
+            this.txtEmployeeCardBarcode.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtEmployeeCardBarcode.UseCustomBackColor = true;
+            this.txtEmployeeCardBarcode.UseSelectable = true;
+            this.txtEmployeeCardBarcode.UseStyleColors = true;
+            this.txtEmployeeCardBarcode.WaterMarkColor = System.Drawing.Color.White;
+            this.txtEmployeeCardBarcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.metroLabel10.Location = new System.Drawing.Point(33, 388);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(146, 19);
+            this.metroLabel10.TabIndex = 25;
+            this.metroLabel10.Text = "Kartela e punonjësit:";
+            this.metroLabel10.UseCustomBackColor = true;
+            this.metroLabel10.UseCustomForeColor = true;
+            this.metroLabel10.UseStyleColors = true;
             // 
             // roundedPanel13
             // 
@@ -500,7 +571,7 @@ namespace Mana.Cards.Client
             this.metroLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
             this.metroLabel8.Location = new System.Drawing.Point(75, 82);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(95, 50);
+            this.metroLabel8.Size = new System.Drawing.Size(97, 50);
             this.metroLabel8.TabIndex = 4;
             this.metroLabel8.Text = "Totali me \r\nzbritje:";
             this.metroLabel8.UseCustomForeColor = true;
@@ -514,7 +585,7 @@ namespace Mana.Cards.Client
             this.metroLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
             this.metroLabel5.Location = new System.Drawing.Point(75, 12);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(64, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(66, 25);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel5.TabIndex = 2;
             this.metroLabel5.Text = "Totali:";
@@ -901,7 +972,7 @@ namespace Mana.Cards.Client
             this.metroLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
             this.metroLabel3.Location = new System.Drawing.Point(13, 130);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(149, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(148, 19);
             this.metroLabel3.TabIndex = 6;
             this.metroLabel3.Text = "Pikët për shfrytëzim:";
             this.metroLabel3.UseCustomForeColor = true;
@@ -935,7 +1006,7 @@ namespace Mana.Cards.Client
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(489, 248);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(217, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(215, 19);
             this.metroLabel7.TabIndex = 3;
             this.metroLabel7.Text = "Shitje të pasinkronizuara me server:";
             // 
@@ -990,7 +1061,7 @@ namespace Mana.Cards.Client
             this.lblPartnerName.BackColor = System.Drawing.Color.Transparent;
             this.lblPartnerName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblPartnerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.lblPartnerName.Location = new System.Drawing.Point(30, 410);
+            this.lblPartnerName.Location = new System.Drawing.Point(30, 12);
             this.lblPartnerName.Name = "lblPartnerName";
             this.lblPartnerName.Size = new System.Drawing.Size(107, 19);
             this.lblPartnerName.TabIndex = 8;
@@ -1041,6 +1112,7 @@ namespace Mana.Cards.Client
             this.metroTabControl1.ResumeLayout(false);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
+            this.roundedPanel14.ResumeLayout(false);
             this.roundedPanel13.ResumeLayout(false);
             this.roundedPanel12.ResumeLayout(false);
             this.rpAddClient.ResumeLayout(false);
@@ -1128,5 +1200,8 @@ namespace Mana.Cards.Client
         private System.Windows.Forms.Button btnFinishSale;
         private RoundedPanel roundedPanel10;
         private RoundedPanel roundedPanel9;
+        private RoundedPanel roundedPanel14;
+        private RoundedTextBox txtEmployeeCardBarcode;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
     }
 }

@@ -27,6 +27,12 @@ namespace Mana.Cards.API.Domain
             set;
         }
 
+        [JsonProperty("employee_card_barcode")]
+        public string EmployeeCardBarcode
+        {
+            get;
+            set;
+        }
         [JsonIgnore]
         public decimal Total
         {

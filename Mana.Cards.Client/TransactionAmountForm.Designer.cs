@@ -193,6 +193,7 @@ namespace Mana.Cards.Client
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Shtypni të dhënat e mëposhtme";
+            this.Shown += new System.EventHandler(this.TransactionAmountForm_Shown);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel2.ResumeLayout(false);
             this.roundedPanel2.PerformLayout();

@@ -75,5 +75,10 @@ namespace Mana.Cards.Client
             this.Close();
         }
 
+        private void TransactionAmountForm_Shown(object sender, EventArgs e)
+        {
+            this.Activate();
+        }
+
     }
 }

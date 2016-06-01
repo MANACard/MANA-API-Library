@@ -82,6 +82,7 @@
     <Compile Include="CardResolverForm.Designer.cs">
       <DependentUpon>CardResolverForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeCardStore.cs" />
     <Compile Include="SalesCancellationForm.cs">
       <SubType>Form</SubType>
     </Compile>

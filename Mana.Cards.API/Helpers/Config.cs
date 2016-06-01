@@ -130,5 +130,17 @@ namespace Mana.Cards.API.Helpers
             }
         }
 
+        public static string EmployeeCardLocation
+        {
+            get
+            {
+                if (ConfigurationManager.AppSettings["OfflineAPI.StorageFolder"] != null)
+                {
+                    return ConfigurationManager.AppSettings["OfflineAPI.StorageFolder"] + "\\.employee_card";
+                }
+
+                return "";
+            }
+        }
     }
 }

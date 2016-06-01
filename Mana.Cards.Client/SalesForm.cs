@@ -136,6 +136,7 @@ namespace Mana.Cards.Client
 
             lblMinPoints.Text = this.RedeemRule.MinimumRedeemablePoints.ToString();
 
+            this.txtEmployeeCardBarcode.Text = EmployeeCardStore.Instance.Get();
 
             if (ExternalRedeem)
             {
@@ -192,6 +193,9 @@ namespace Mana.Cards.Client
             if (ValidateFields())
             {
                 this.sale.CardBarcode = txtCardBarcode.Text;
+                this.sale.EmployeeCardBarcode = txtEmployeeCardBarcode.Text;
+
+                EmployeeCardStore.Instance.Set(this.sale.EmployeeCardBarcode);
                 int redeem_points = 0;
 
                 Int32.TryParse(txtRedeemPoints.Text, out redeem_points);
