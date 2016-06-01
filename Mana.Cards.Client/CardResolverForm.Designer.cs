@@ -37,16 +37,16 @@ namespace Mana.Cards.Client
             this.birth_date = new System.Windows.Forms.DateTimePicker();
             this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.btnFindCard = new System.Windows.Forms.Button();
             this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.roundedPanel7 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.btnFindCard = new System.Windows.Forms.Button();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
+            this.roundedPanel11.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
             this.roundedPanel7.SuspendLayout();
-            this.roundedPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtPhone
@@ -146,6 +146,39 @@ namespace Mana.Cards.Client
             this.roundedPanel2.Size = new System.Drawing.Size(334, 174);
             this.roundedPanel2.TabIndex = 13;
             // 
+            // roundedPanel11
+            // 
+            this.roundedPanel11.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPanel11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.roundedPanel11.BorderWidth = 2;
+            this.roundedPanel11.Controls.Add(this.btnFindCard);
+            this.roundedPanel11.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.roundedPanel11.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.roundedPanel11.Image = null;
+            this.roundedPanel11.ImageLocation = new System.Drawing.Point(4, 4);
+            this.roundedPanel11.Location = new System.Drawing.Point(216, 121);
+            this.roundedPanel11.Name = "roundedPanel11";
+            this.roundedPanel11.RoundCornerRadius = 15;
+            this.roundedPanel11.Size = new System.Drawing.Size(105, 34);
+            this.roundedPanel11.TabIndex = 38;
+            // 
+            // btnFindCard
+            // 
+            this.btnFindCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.btnFindCard.FlatAppearance.BorderSize = 0;
+            this.btnFindCard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.btnFindCard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFindCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindCard.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindCard.ForeColor = System.Drawing.Color.White;
+            this.btnFindCard.Location = new System.Drawing.Point(3, 3);
+            this.btnFindCard.Name = "btnFindCard";
+            this.btnFindCard.Size = new System.Drawing.Size(94, 23);
+            this.btnFindCard.TabIndex = 0;
+            this.btnFindCard.Text = "Gjej kartelën";
+            this.btnFindCard.UseVisualStyleBackColor = false;
+            this.btnFindCard.Click += new System.EventHandler(this.btnFindCard_Click);
+            // 
             // roundedPanel3
             // 
             this.roundedPanel3.BackColor = System.Drawing.Color.Transparent;
@@ -191,39 +224,6 @@ namespace Mana.Cards.Client
             this.metroLabel3.Text = "Shtypni të dhënat e mëposhtme";
             this.metroLabel3.UseCustomForeColor = true;
             // 
-            // roundedPanel11
-            // 
-            this.roundedPanel11.BackColor = System.Drawing.Color.Transparent;
-            this.roundedPanel11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.roundedPanel11.BorderWidth = 2;
-            this.roundedPanel11.Controls.Add(this.btnFindCard);
-            this.roundedPanel11.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.roundedPanel11.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.roundedPanel11.Image = null;
-            this.roundedPanel11.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel11.Location = new System.Drawing.Point(216, 121);
-            this.roundedPanel11.Name = "roundedPanel11";
-            this.roundedPanel11.RoundCornerRadius = 15;
-            this.roundedPanel11.Size = new System.Drawing.Size(105, 34);
-            this.roundedPanel11.TabIndex = 38;
-            // 
-            // btnFindCard
-            // 
-            this.btnFindCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.btnFindCard.FlatAppearance.BorderSize = 0;
-            this.btnFindCard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.btnFindCard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnFindCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFindCard.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindCard.ForeColor = System.Drawing.Color.White;
-            this.btnFindCard.Location = new System.Drawing.Point(3, 3);
-            this.btnFindCard.Name = "btnFindCard";
-            this.btnFindCard.Size = new System.Drawing.Size(94, 23);
-            this.btnFindCard.TabIndex = 0;
-            this.btnFindCard.Text = "Gjej kartelën";
-            this.btnFindCard.UseVisualStyleBackColor = false;
-            this.btnFindCard.Click += new System.EventHandler(this.btnFindCard_Click);
-            // 
             // CardResolverForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,9 +241,9 @@ namespace Mana.Cards.Client
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel2.ResumeLayout(false);
             this.roundedPanel2.PerformLayout();
+            this.roundedPanel11.ResumeLayout(false);
             this.roundedPanel3.ResumeLayout(false);
             this.roundedPanel7.ResumeLayout(false);
-            this.roundedPanel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

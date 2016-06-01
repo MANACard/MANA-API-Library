@@ -116,6 +116,9 @@
     <Compile Include="UnsyncedSalesForm.Designer.cs">
       <DependentUpon>UnsyncedSalesForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CardResolverForm.resx">
+      <DependentUpon>CardResolverForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientCredentialsForm.resx">
       <DependentUpon>ClientCredentialsForm.cs</DependentUpon>
     </EmbeddedResource>
