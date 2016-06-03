@@ -36,19 +36,19 @@
             this.lblPartnerName = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel8 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.btnSaleCancellation = new System.Windows.Forms.Button();
-            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.roundedPanel4 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.btnSelectSale = new System.Windows.Forms.Button();
+            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.roundedPanel8 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.btnSaleCancellation = new System.Windows.Forms.Button();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
-            this.roundedPanel8.SuspendLayout();
-            this.roundedPanel3.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
+            this.roundedPanel3.SuspendLayout();
+            this.roundedPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridSales
@@ -153,51 +153,38 @@
             this.roundedPanel2.Size = new System.Drawing.Size(759, 324);
             this.roundedPanel2.TabIndex = 13;
             // 
-            // metroLabel3
+            // roundedPanel4
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.metroLabel3.Location = new System.Drawing.Point(13, 2);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(123, 25);
-            this.metroLabel3.TabIndex = 5;
-            this.metroLabel3.Text = "Zgjedh shitjen";
-            this.metroLabel3.UseCustomForeColor = true;
+            this.roundedPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.roundedPanel4.BorderWidth = 2;
+            this.roundedPanel4.Controls.Add(this.btnSelectSale);
+            this.roundedPanel4.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.roundedPanel4.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.roundedPanel4.Image = null;
+            this.roundedPanel4.ImageLocation = new System.Drawing.Point(4, 4);
+            this.roundedPanel4.Location = new System.Drawing.Point(639, 30);
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.RoundCornerRadius = 15;
+            this.roundedPanel4.Size = new System.Drawing.Size(104, 34);
+            this.roundedPanel4.TabIndex = 24;
             // 
-            // roundedPanel8
+            // btnSelectSale
             // 
-            this.roundedPanel8.BackColor = System.Drawing.Color.Transparent;
-            this.roundedPanel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.roundedPanel8.BorderWidth = 2;
-            this.roundedPanel8.Controls.Add(this.btnSaleCancellation);
-            this.roundedPanel8.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.roundedPanel8.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.roundedPanel8.Image = null;
-            this.roundedPanel8.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel8.Location = new System.Drawing.Point(20, 30);
-            this.roundedPanel8.Name = "roundedPanel8";
-            this.roundedPanel8.RoundCornerRadius = 15;
-            this.roundedPanel8.Size = new System.Drawing.Size(116, 34);
-            this.roundedPanel8.TabIndex = 22;
-            // 
-            // btnSaleCancellation
-            // 
-            this.btnSaleCancellation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.btnSaleCancellation.FlatAppearance.BorderSize = 0;
-            this.btnSaleCancellation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.btnSaleCancellation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(160)))));
-            this.btnSaleCancellation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaleCancellation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaleCancellation.ForeColor = System.Drawing.Color.White;
-            this.btnSaleCancellation.Location = new System.Drawing.Point(3, 3);
-            this.btnSaleCancellation.Name = "btnSaleCancellation";
-            this.btnSaleCancellation.Size = new System.Drawing.Size(105, 23);
-            this.btnSaleCancellation.TabIndex = 0;
-            this.btnSaleCancellation.Text = "Anulimi i shitjeve";
-            this.btnSaleCancellation.UseVisualStyleBackColor = false;
-            this.btnSaleCancellation.Click += new System.EventHandler(this.btnSaleCancellation_Click);
+            this.btnSelectSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.btnSelectSale.FlatAppearance.BorderSize = 0;
+            this.btnSelectSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.btnSelectSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(160)))));
+            this.btnSelectSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectSale.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectSale.ForeColor = System.Drawing.Color.White;
+            this.btnSelectSale.Location = new System.Drawing.Point(3, 3);
+            this.btnSelectSale.Name = "btnSelectSale";
+            this.btnSelectSale.Size = new System.Drawing.Size(93, 23);
+            this.btnSelectSale.TabIndex = 0;
+            this.btnSelectSale.Text = "Zgjedh shitjen";
+            this.btnSelectSale.UseVisualStyleBackColor = false;
+            this.btnSelectSale.Click += new System.EventHandler(this.btnSelectSale_Click);
             // 
             // roundedPanel3
             // 
@@ -232,38 +219,51 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // roundedPanel4
+            // roundedPanel8
             // 
-            this.roundedPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.roundedPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.roundedPanel4.BorderWidth = 2;
-            this.roundedPanel4.Controls.Add(this.btnSelectSale);
-            this.roundedPanel4.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.roundedPanel4.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.roundedPanel4.Image = null;
-            this.roundedPanel4.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel4.Location = new System.Drawing.Point(639, 30);
-            this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.RoundCornerRadius = 15;
-            this.roundedPanel4.Size = new System.Drawing.Size(104, 34);
-            this.roundedPanel4.TabIndex = 24;
+            this.roundedPanel8.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPanel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.roundedPanel8.BorderWidth = 2;
+            this.roundedPanel8.Controls.Add(this.btnSaleCancellation);
+            this.roundedPanel8.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.roundedPanel8.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.roundedPanel8.Image = null;
+            this.roundedPanel8.ImageLocation = new System.Drawing.Point(4, 4);
+            this.roundedPanel8.Location = new System.Drawing.Point(20, 30);
+            this.roundedPanel8.Name = "roundedPanel8";
+            this.roundedPanel8.RoundCornerRadius = 15;
+            this.roundedPanel8.Size = new System.Drawing.Size(116, 34);
+            this.roundedPanel8.TabIndex = 22;
             // 
-            // btnSelectSale
+            // btnSaleCancellation
             // 
-            this.btnSelectSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.btnSelectSale.FlatAppearance.BorderSize = 0;
-            this.btnSelectSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.btnSelectSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(160)))));
-            this.btnSelectSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectSale.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectSale.ForeColor = System.Drawing.Color.White;
-            this.btnSelectSale.Location = new System.Drawing.Point(3, 3);
-            this.btnSelectSale.Name = "btnSelectSale";
-            this.btnSelectSale.Size = new System.Drawing.Size(93, 23);
-            this.btnSelectSale.TabIndex = 0;
-            this.btnSelectSale.Text = "Zgjedh shitjen";
-            this.btnSelectSale.UseVisualStyleBackColor = false;
-            this.btnSelectSale.Click += new System.EventHandler(this.btnSelectSale_Click);
+            this.btnSaleCancellation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.btnSaleCancellation.FlatAppearance.BorderSize = 0;
+            this.btnSaleCancellation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.btnSaleCancellation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(160)))));
+            this.btnSaleCancellation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaleCancellation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaleCancellation.ForeColor = System.Drawing.Color.White;
+            this.btnSaleCancellation.Location = new System.Drawing.Point(3, 3);
+            this.btnSaleCancellation.Name = "btnSaleCancellation";
+            this.btnSaleCancellation.Size = new System.Drawing.Size(105, 23);
+            this.btnSaleCancellation.TabIndex = 0;
+            this.btnSaleCancellation.Text = "Anulimi i shitjeve";
+            this.btnSaleCancellation.UseVisualStyleBackColor = false;
+            this.btnSaleCancellation.Click += new System.EventHandler(this.btnSaleCancellation_Click);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.metroLabel3.Location = new System.Drawing.Point(13, 2);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(123, 25);
+            this.metroLabel3.TabIndex = 5;
+            this.metroLabel3.Text = "Zgjedh shitjen";
+            this.metroLabel3.UseCustomForeColor = true;
             // 
             // SalesProviderForm
             // 
@@ -283,9 +283,9 @@
             this.roundedPanel1.PerformLayout();
             this.roundedPanel2.ResumeLayout(false);
             this.roundedPanel2.PerformLayout();
-            this.roundedPanel8.ResumeLayout(false);
-            this.roundedPanel3.ResumeLayout(false);
             this.roundedPanel4.ResumeLayout(false);
+            this.roundedPanel3.ResumeLayout(false);
+            this.roundedPanel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

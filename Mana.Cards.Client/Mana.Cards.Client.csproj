@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mana.Cards.Client</RootNamespace>
     <AssemblyName>Mana.Cards.Client</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -137,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesProviderForm.resx">
+      <DependentUpon>SalesProviderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionAmountForm.resx">
       <DependentUpon>TransactionAmountForm.cs</DependentUpon>
