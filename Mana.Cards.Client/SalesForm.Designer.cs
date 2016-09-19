@@ -41,7 +41,7 @@ namespace Mana.Cards.Client
             this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.roundedPanel14 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.txtEmployeeCardBarcode = new Mana.Cards.Client.CostumControls.RoundedTextBox();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.lblEmployeeCard = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel13 = new Mana.Cards.Client.CostumControls.RoundedPanel();
             this.btnSalesCancellation = new System.Windows.Forms.Button();
             this.roundedPanel12 = new Mana.Cards.Client.CostumControls.RoundedPanel();
@@ -100,7 +100,6 @@ namespace Mana.Cards.Client
             this.rpAddClient.SuspendLayout();
             this.rpSale.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -182,7 +181,7 @@ namespace Mana.Cards.Client
             // 
             this.roundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.roundedPanel1.Controls.Add(this.roundedPanel14);
-            this.roundedPanel1.Controls.Add(this.metroLabel10);
+            this.roundedPanel1.Controls.Add(this.lblEmployeeCard);
             this.roundedPanel1.Controls.Add(this.roundedPanel13);
             this.roundedPanel1.Controls.Add(this.roundedPanel12);
             this.roundedPanel1.Controls.Add(this.rpAddClient);
@@ -252,20 +251,20 @@ namespace Mana.Cards.Client
             this.txtEmployeeCardBarcode.WaterMarkColor = System.Drawing.Color.White;
             this.txtEmployeeCardBarcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel10
+            // lblEmployeeCard
             // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.metroLabel10.Location = new System.Drawing.Point(33, 388);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(146, 19);
-            this.metroLabel10.TabIndex = 25;
-            this.metroLabel10.Text = "Kartela e punonjësit:";
-            this.metroLabel10.UseCustomBackColor = true;
-            this.metroLabel10.UseCustomForeColor = true;
-            this.metroLabel10.UseStyleColors = true;
+            this.lblEmployeeCard.AutoSize = true;
+            this.lblEmployeeCard.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmployeeCard.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblEmployeeCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.lblEmployeeCard.Location = new System.Drawing.Point(33, 388);
+            this.lblEmployeeCard.Name = "lblEmployeeCard";
+            this.lblEmployeeCard.Size = new System.Drawing.Size(146, 19);
+            this.lblEmployeeCard.TabIndex = 25;
+            this.lblEmployeeCard.Text = "Kartela e punonjësit:";
+            this.lblEmployeeCard.UseCustomBackColor = true;
+            this.lblEmployeeCard.UseCustomForeColor = true;
+            this.lblEmployeeCard.UseStyleColors = true;
             // 
             // roundedPanel13
             // 
@@ -1121,7 +1120,6 @@ namespace Mana.Cards.Client
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
-            //((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.roundedPanel11.ResumeLayout(false);
@@ -1202,6 +1200,6 @@ namespace Mana.Cards.Client
         private RoundedPanel roundedPanel9;
         private RoundedPanel roundedPanel14;
         private RoundedTextBox txtEmployeeCardBarcode;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroLabel lblEmployeeCard;
     }
 }

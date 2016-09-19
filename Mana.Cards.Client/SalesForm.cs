@@ -165,6 +165,11 @@ namespace Mana.Cards.Client
             {
                 editModeLbl.Visible = true;
             }
+
+            if (!Config.UseEmployeeCard)
+            {
+                txtEmployeeCardBarcode.Visible = lblEmployeeCard.Visible = roundedPanel14.Visible = false;
+            }
             pnlOfflineSales.Visible = metroLabel7.Visible = lblUnsynced.Visible = Config.EnableOfflineAPI;
             btnFinishSale.Enabled = !DisableSale;
         }
