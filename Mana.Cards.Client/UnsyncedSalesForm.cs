@@ -42,8 +42,9 @@ namespace Mana.Cards.Client
             var service = new SyncService();
 
             gridSales.DataSource = null;
+            var unsynced = service.GetUnsyncedSales();
 
-            var sales = service.GetUnsyncedSales().Select(x => new
+            var sales = unsynced.Where(x=>x != null).Select(x => new
             {
                 Barcode = x.Sale.CardBarcode,
                 Total = x.Sale.Total,

@@ -8,6 +8,7 @@ using StructureMap;
 using StructureMap.Exceptions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,6 +17,8 @@ namespace Mana.Cards.Client
 {
     static class Program
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -24,7 +27,13 @@ namespace Mana.Cards.Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            log4net.Config.XmlConfigurator.Configure();
 
+            ProcessStartInfo startInfo = new ProcessStartInfo(@"Mana.Cards.OfflineAPI.exe");
+            startInfo.CreateNoWindow = true;
+            startInfo.UseShellExecute = false;
+
+            Process.Start(startInfo);
             try
             {
                 ObjectFactory.Initialize(x =>
@@ -55,7 +64,7 @@ namespace Mana.Cards.Client
                     }
                     else
                     {
-                        Application.Run(new SalesCancellationForm());
+                        Application.Run(new SaleProductsForm());
                     }
 
 
@@ -113,6 +122,7 @@ namespace Mana.Cards.Client
             }
             catch (Exception e)
             {
+                log.Error("MANA Client", e);
                 MessageBox.Show(e.Message);
                 Environment.Exit(500);
             }

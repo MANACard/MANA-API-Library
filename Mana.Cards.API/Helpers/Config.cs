@@ -29,7 +29,7 @@ namespace Mana.Cards.API.Helpers
         {
             get
             {
-                return String.Format("{0}{1}", Config.APIUrl, ConfigurationManager.AppSettings["CardsEndpoint"]);
+                return String.Format("{0}{1}", Config.APIUrl, "/cards");
             }
         }
 
@@ -37,7 +37,7 @@ namespace Mana.Cards.API.Helpers
         {
             get
             {
-                return String.Format("{0}{1}", Config.APIUrl, ConfigurationManager.AppSettings["SalesEndpoint"]);
+                return String.Format("{0}{1}", Config.APIUrl, "/sales");
             }
         }
 
@@ -45,21 +45,21 @@ namespace Mana.Cards.API.Helpers
         {
             get
             {
-                return String.Format("{0}{1}", Config.APIUrl, ConfigurationManager.AppSettings["ClientsEndpoint"]);
+                return String.Format("{0}{1}", Config.APIUrl, "/clients");
             }
         }
         public static string ClientsCardResolveURL
         {
             get
             {
-                return String.Format("{0}{1}", Config.APIUrl, ConfigurationManager.AppSettings["ClientsCardResolveEndpoint"]);
+                return String.Format("{0}{1}", Config.APIUrl, "/cards/resolve");
             }
         }
         public static string ClientsSearchEndpointURL
         {
             get
             {
-                return String.Format("{0}{1}", Config.APIUrl, ConfigurationManager.AppSettings["ClientsSearchEndpoint"]);
+                return String.Format("{0}{1}", Config.APIUrl, "/clients/search");
             }
         }
         public static bool EnableOfflineAPI

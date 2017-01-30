@@ -15,6 +15,9 @@ namespace Mana.Cards.OfflineAPI.Services
     public class SaleService : ISaleService
     {
         private ISaleRepository saleRepository;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger
+        (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
 
         public SaleService()
         {
@@ -48,6 +51,22 @@ namespace Mana.Cards.OfflineAPI.Services
                 try
                 {
                     return action.Invoke(sale, transactionId);
+                }
+                catch (SaleAlreadySubmittedException e)
+                {
+
+                }
+                catch (AuthenticationFailedException e)
+                {
+                    this.saleRepository.AddSale(sale, transactionId);
+                }
+                catch (CardNotActiveException e)
+                {
+
+                }
+                catch (CardNotFoundException e)
+                {
+
                 }
                 catch (WebException ex)
                 {

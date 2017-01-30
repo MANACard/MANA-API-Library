@@ -1,4 +1,4 @@
-﻿using Mana.Cards.Client.CostumControls;
+﻿using Mana.Cards.Client.CustomControls;
 using System.Drawing;
 
 namespace Mana.Cards.Client
@@ -32,12 +32,12 @@ namespace Mana.Cards.Client
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientCredentialsForm));
-            this.txtPhone = new Mana.Cards.Client.CostumControls.RoundedTextBox();
-            this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.txtPhone = new Mana.Cards.Client.CustomControls.RoundedTextBox();
+            this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel11 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnCancelSale = new System.Windows.Forms.Button();
-            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel3 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel1.SuspendLayout();
@@ -207,11 +207,11 @@ namespace Mana.Cards.Client
         #endregion
 
         private RoundedTextBox txtPhone;
-        private CostumControls.RoundedPanel roundedPanel1;
-        private CostumControls.RoundedPanel roundedPanel2;
-        private CostumControls.RoundedPanel roundedPanel11;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel2;
+        private CustomControls.RoundedPanel roundedPanel11;
         private System.Windows.Forms.Button btnCancelSale;
-        private CostumControls.RoundedPanel roundedPanel3;
+        private CustomControls.RoundedPanel roundedPanel3;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
     }

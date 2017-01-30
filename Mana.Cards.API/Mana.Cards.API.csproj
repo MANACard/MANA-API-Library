@@ -50,6 +50,8 @@
     <Compile Include="APISession.cs" />
     <Compile Include="Domain\CardInfo.cs" />
     <Compile Include="Domain\Client.cs" />
+    <Compile Include="Domain\Meta.cs" />
+    <Compile Include="Domain\Product.cs" />
     <Compile Include="Domain\RecentSaleModel.cs" />
     <Compile Include="Domain\RedeemRule.cs" />
     <Compile Include="Domain\SaleDescriptor.cs" />
@@ -76,10 +78,12 @@
     <Compile Include="ServiceInterfaces\ICardService.cs" />
     <Compile Include="ServiceInterfaces\IClientService.cs" />
     <Compile Include="ServiceInterfaces\IPartnerService.cs" />
+    <Compile Include="ServiceInterfaces\IProductService.cs" />
     <Compile Include="ServiceInterfaces\ISaleService.cs" />
     <Compile Include="Services\CardService.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\PartnerService.cs" />
+    <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\SaleService.cs" />
     <Compile Include="ViewModels\ClientViewModel.cs" />
   </ItemGroup>

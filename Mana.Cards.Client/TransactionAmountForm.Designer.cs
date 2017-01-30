@@ -1,4 +1,4 @@
-﻿using Mana.Cards.Client.CostumControls;
+﻿using Mana.Cards.Client.CustomControls;
 
 namespace Mana.Cards.Client
 {
@@ -30,13 +30,13 @@ namespace Mana.Cards.Client
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPhone = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.txtPhone = new Mana.Cards.Client.CustomControls.RoundedTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel11 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnContinue = new System.Windows.Forms.Button();
-            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel3 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
@@ -207,10 +207,10 @@ namespace Mana.Cards.Client
 
         private RoundedTextBox txtPhone;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private CostumControls.RoundedPanel roundedPanel1;
-        private CostumControls.RoundedPanel roundedPanel2;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private CostumControls.RoundedPanel roundedPanel3;
+        private CustomControls.RoundedPanel roundedPanel3;
         private RoundedPanel roundedPanel11;
         private System.Windows.Forms.Button btnContinue;
     }

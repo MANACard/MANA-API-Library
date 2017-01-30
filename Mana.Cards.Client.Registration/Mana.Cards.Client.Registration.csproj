@@ -75,14 +75,17 @@
     <Compile Include="ClientSearchForm.Designer.cs">
       <DependentUpon>ClientSearchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Extensions\CitiesAutocompleter.cs" />
-    <Compile Include="CostumControls\RoundedPanel.cs">
+    <Compile Include="CustomControls\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CostumControls\RoundedComboBox.cs">
+    <Compile Include="CustomControls\RoundedComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CostumControls\RoundedTextBox.cs">
+    <Compile Include="CustomControls\RoundedTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -99,7 +102,7 @@
     <EmbeddedResource Include="ClientSearchForm.resx">
       <DependentUpon>ClientSearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CostumControls\RoundedPanel.resx">
+    <EmbeddedResource Include="CustomControls\RoundedPanel.resx">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -72,6 +72,13 @@ namespace Mana.Cards.API.Domain
             set;
         }
 
+        [JsonProperty("custom_message")]
+        public string CustomMessage
+        {
+            get;
+            set;
+        }
+
         [JsonProperty("sales_line_items")]
         public List<SalesLineItemInfo> SalesLineItems { get; set; }
     }

@@ -21,7 +21,7 @@ namespace Mana.Cards.OfflineAPI.Repositories
         {
             System.IO.Directory.CreateDirectory(this.Path);
 
-            var path = String.Format("{0}\\{1}", this.Path, Guid.NewGuid());
+            var path = String.Format("{0}\\{1}.unsynced", this.Path, Guid.NewGuid());
 
             sale.Redeem.Points = 0; // no redeem if offline
 
@@ -40,7 +40,7 @@ namespace Mana.Cards.OfflineAPI.Repositories
         public IEnumerable<SaleModel> GetSales(bool deleteSales = true)
         {
             List<SaleModel> sales = new List<SaleModel>();
-            foreach (var file in Directory.GetFiles(this.Path))
+            foreach (var file in Directory.GetFiles(this.Path, "*.unsynced"))
             {
                 string contents = File.ReadAllText(file);
                 var model = JsonConvert.DeserializeObject<SaleModel>(contents);

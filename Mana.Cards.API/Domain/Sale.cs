@@ -19,6 +19,8 @@ namespace Mana.Cards.API.Domain
         [JsonProperty("sale_id", NullValueHandling = NullValueHandling.Ignore)]
         public UInt64? Id { get; set; }
 
+        [JsonIgnore]
+        public string TransactionId { get; set; }
 
         [JsonProperty("card_barcode")]
         public string CardBarcode

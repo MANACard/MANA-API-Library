@@ -32,13 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesProviderForm));
-            this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel4 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel4 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnSelectSale = new System.Windows.Forms.Button();
-            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel3 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.roundedPanel8 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel8 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnSaleCancellation = new System.Windows.Forms.Button();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.gridSales = new MetroFramework.Controls.MetroGrid();
@@ -294,14 +294,14 @@
 
         private MetroFramework.Controls.MetroGrid gridSales;
         private MetroFramework.Controls.MetroLabel lblPartnerName;
-        private CostumControls.RoundedPanel roundedPanel1;
-        private CostumControls.RoundedPanel roundedPanel2;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private CostumControls.RoundedPanel roundedPanel4;
+        private CustomControls.RoundedPanel roundedPanel4;
         private System.Windows.Forms.Button btnSelectSale;
-        private CostumControls.RoundedPanel roundedPanel3;
+        private CustomControls.RoundedPanel roundedPanel3;
         private System.Windows.Forms.Button btnRefresh;
-        private CostumControls.RoundedPanel roundedPanel8;
+        private CustomControls.RoundedPanel roundedPanel8;
         private System.Windows.Forms.Button btnSaleCancellation;
     }
 }

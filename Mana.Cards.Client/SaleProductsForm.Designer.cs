@@ -2,7 +2,7 @@
 
 namespace Mana.Cards.Client
 {
-    partial class SalesForm
+    partial class SaleProductsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,10 @@ namespace Mana.Cards.Client
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.salesDetails = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaleProductsForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.roundedPanel14 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.txtEmployeeCardBarcode = new Mana.Cards.Client.CustomControls.RoundedTextBox();
@@ -46,13 +43,8 @@ namespace Mana.Cards.Client
             this.btnSalesCancellation = new System.Windows.Forms.Button();
             this.roundedPanel12 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.button2 = new System.Windows.Forms.Button();
-            this.rpAddClient = new Mana.Cards.Client.CustomControls.RoundedPanel();
-            this.btnAddClient = new System.Windows.Forms.Button();
-            this.rpSale = new Mana.Cards.Client.CustomControls.RoundedPanel();
-            this.btnSale = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.roundedPanel11 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnFinishSale = new System.Windows.Forms.Button();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
@@ -60,8 +52,8 @@ namespace Mana.Cards.Client
             this.lblTotal = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel9 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.lblTotalDiscount = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.roundedPanel8 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -80,30 +72,26 @@ namespace Mana.Cards.Client
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.cardProgress = new MetroFramework.Controls.MetroProgressSpinner();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.lblUnsynced = new MetroFramework.Controls.MetroLabel();
-            this.pnlOfflineSales = new MetroFramework.Controls.MetroPanel();
-            this.clientRegistrationControl1 = new Mana.Cards.Client.ClientRegistrationControl();
-            this.lblInfo = new System.Windows.Forms.Label();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gridSales = new MetroFramework.Controls.MetroGrid();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
             this.lblPartnerName = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.editModeLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
-            this.metroTabControl1.SuspendLayout();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel14.SuspendLayout();
             this.roundedPanel13.SuspendLayout();
             this.roundedPanel12.SuspendLayout();
-            this.rpAddClient.SuspendLayout();
-            this.rpSale.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.roundedPanel2.SuspendLayout();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
             this.roundedPanel11.SuspendLayout();
             this.metroPanel3.SuspendLayout();
             this.roundedPanel10.SuspendLayout();
@@ -115,67 +103,11 @@ namespace Mana.Cards.Client
             this.roundedPanel5.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // metroStyleManager1
-            // 
-            this.metroStyleManager1.Owner = this;
-            this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.White;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(0, 0);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.UseSelectable = true;
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
-            // metroTabControl1
-            // 
-            this.metroTabControl1.Controls.Add(this.salesDetails);
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Location = new System.Drawing.Point(636, 11);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(11, 10);
-            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.White;
-            this.metroTabControl1.TabIndex = 5;
-            this.metroTabControl1.UseSelectable = true;
-            // 
-            // salesDetails
-            // 
-            this.salesDetails.HorizontalScrollbarBarColor = true;
-            this.salesDetails.HorizontalScrollbarHighlightOnWheel = false;
-            this.salesDetails.HorizontalScrollbarSize = 10;
-            this.salesDetails.Location = new System.Drawing.Point(4, 38);
-            this.salesDetails.Name = "salesDetails";
-            this.salesDetails.Size = new System.Drawing.Size(3, 0);
-            this.salesDetails.TabIndex = 0;
-            this.salesDetails.Text = "Shitja";
-            this.salesDetails.VerticalScrollbarBarColor = true;
-            this.salesDetails.VerticalScrollbarHighlightOnWheel = false;
-            this.salesDetails.VerticalScrollbarSize = 10;
-            // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(3, -32);
-            this.metroTabPage1.TabIndex = 1;
-            this.metroTabPage1.Text = "Regjistrimi i klientit";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
-            this.metroTabPage1.Visible = false;
             // 
             // roundedPanel1
             // 
@@ -184,22 +116,19 @@ namespace Mana.Cards.Client
             this.roundedPanel1.Controls.Add(this.lblEmployeeCard);
             this.roundedPanel1.Controls.Add(this.roundedPanel13);
             this.roundedPanel1.Controls.Add(this.roundedPanel12);
-            this.roundedPanel1.Controls.Add(this.rpAddClient);
-            this.roundedPanel1.Controls.Add(this.rpSale);
-            this.roundedPanel1.Controls.Add(this.roundedPanel2);
-            this.roundedPanel1.Controls.Add(this.lblInfo);
-            this.roundedPanel1.Controls.Add(this.lblPartnerName);
             this.roundedPanel1.Controls.Add(this.pictureBox1);
-            this.roundedPanel1.Controls.Add(this.editModeLbl);
+            this.roundedPanel1.Controls.Add(this.roundedPanel2);
+            this.roundedPanel1.Controls.Add(this.lblPartnerName);
+            this.roundedPanel1.Controls.Add(this.metroLabel3);
             this.roundedPanel1.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(191)))), ((int)(((byte)(185)))));
             this.roundedPanel1.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(191)))), ((int)(((byte)(185)))));
             this.roundedPanel1.Image = null;
             this.roundedPanel1.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel1.Location = new System.Drawing.Point(10, 27);
+            this.roundedPanel1.Location = new System.Drawing.Point(6, 26);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.RoundCornerRadius = 20;
-            this.roundedPanel1.Size = new System.Drawing.Size(839, 466);
-            this.roundedPanel1.TabIndex = 0;
+            this.roundedPanel1.Size = new System.Drawing.Size(944, 473);
+            this.roundedPanel1.TabIndex = 14;
             // 
             // roundedPanel14
             // 
@@ -211,11 +140,11 @@ namespace Mana.Cards.Client
             this.roundedPanel14.GradientStartColor = System.Drawing.Color.White;
             this.roundedPanel14.Image = null;
             this.roundedPanel14.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel14.Location = new System.Drawing.Point(33, 410);
+            this.roundedPanel14.Location = new System.Drawing.Point(18, 420);
             this.roundedPanel14.Name = "roundedPanel14";
             this.roundedPanel14.RoundCornerRadius = 15;
             this.roundedPanel14.Size = new System.Drawing.Size(218, 34);
-            this.roundedPanel14.TabIndex = 26;
+            this.roundedPanel14.TabIndex = 30;
             // 
             // txtEmployeeCardBarcode
             // 
@@ -257,10 +186,10 @@ namespace Mana.Cards.Client
             this.lblEmployeeCard.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployeeCard.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblEmployeeCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.lblEmployeeCard.Location = new System.Drawing.Point(33, 388);
+            this.lblEmployeeCard.Location = new System.Drawing.Point(18, 398);
             this.lblEmployeeCard.Name = "lblEmployeeCard";
             this.lblEmployeeCard.Size = new System.Drawing.Size(146, 19);
-            this.lblEmployeeCard.TabIndex = 25;
+            this.lblEmployeeCard.TabIndex = 29;
             this.lblEmployeeCard.Text = "Kartela e punonjësit:";
             this.lblEmployeeCard.UseCustomBackColor = true;
             this.lblEmployeeCard.UseCustomForeColor = true;
@@ -276,11 +205,11 @@ namespace Mana.Cards.Client
             this.roundedPanel13.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
             this.roundedPanel13.Image = null;
             this.roundedPanel13.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel13.Location = new System.Drawing.Point(636, 410);
+            this.roundedPanel13.Location = new System.Drawing.Point(733, 412);
             this.roundedPanel13.Name = "roundedPanel13";
             this.roundedPanel13.RoundCornerRadius = 15;
             this.roundedPanel13.Size = new System.Drawing.Size(164, 34);
-            this.roundedPanel13.TabIndex = 1;
+            this.roundedPanel13.TabIndex = 28;
             // 
             // btnSalesCancellation
             // 
@@ -309,11 +238,11 @@ namespace Mana.Cards.Client
             this.roundedPanel12.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
             this.roundedPanel12.Image = null;
             this.roundedPanel12.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel12.Location = new System.Drawing.Point(469, 410);
+            this.roundedPanel12.Location = new System.Drawing.Point(566, 412);
             this.roundedPanel12.Name = "roundedPanel12";
             this.roundedPanel12.RoundCornerRadius = 15;
             this.roundedPanel12.Size = new System.Drawing.Size(164, 34);
-            this.roundedPanel12.TabIndex = 0;
+            this.roundedPanel12.TabIndex = 27;
             // 
             // button2
             // 
@@ -330,125 +259,38 @@ namespace Mana.Cards.Client
             this.button2.TabIndex = 0;
             this.button2.Text = "Kam harruar kartelën";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // rpAddClient
+            // pictureBox1
             // 
-            this.rpAddClient.BackColor = System.Drawing.Color.Transparent;
-            this.rpAddClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.rpAddClient.BorderWidth = 2;
-            this.rpAddClient.Controls.Add(this.btnAddClient);
-            this.rpAddClient.GradientEndColor = System.Drawing.Color.Transparent;
-            this.rpAddClient.GradientStartColor = System.Drawing.Color.Transparent;
-            this.rpAddClient.Image = null;
-            this.rpAddClient.ImageLocation = new System.Drawing.Point(4, 4);
-            this.rpAddClient.Location = new System.Drawing.Point(151, 41);
-            this.rpAddClient.Name = "rpAddClient";
-            this.rpAddClient.RoundCornerRadius = 15;
-            this.rpAddClient.Size = new System.Drawing.Size(155, 34);
-            this.rpAddClient.TabIndex = 23;
-            // 
-            // btnAddClient
-            // 
-            this.btnAddClient.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddClient.FlatAppearance.BorderSize = 0;
-            this.btnAddClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClient.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.btnAddClient.Location = new System.Drawing.Point(3, 3);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(144, 23);
-            this.btnAddClient.TabIndex = 0;
-            this.btnAddClient.Text = "Regjistrimi i klientit";
-            this.btnAddClient.UseVisualStyleBackColor = false;
-            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
-            // 
-            // rpSale
-            // 
-            this.rpSale.BackColor = System.Drawing.Color.Transparent;
-            this.rpSale.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.rpSale.BorderWidth = 2;
-            this.rpSale.Controls.Add(this.btnSale);
-            this.rpSale.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.rpSale.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.rpSale.Image = null;
-            this.rpSale.ImageLocation = new System.Drawing.Point(4, 4);
-            this.rpSale.Location = new System.Drawing.Point(30, 41);
-            this.rpSale.Name = "rpSale";
-            this.rpSale.RoundCornerRadius = 15;
-            this.rpSale.Size = new System.Drawing.Size(116, 34);
-            this.rpSale.TabIndex = 22;
-            // 
-            // btnSale
-            // 
-            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.btnSale.FlatAppearance.BorderSize = 0;
-            this.btnSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSale.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSale.ForeColor = System.Drawing.Color.White;
-            this.btnSale.Location = new System.Drawing.Point(3, 3);
-            this.btnSale.Name = "btnSale";
-            this.btnSale.Size = new System.Drawing.Size(105, 23);
-            this.btnSale.TabIndex = 0;
-            this.btnSale.Text = "Shitja";
-            this.btnSale.UseVisualStyleBackColor = false;
-            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(758, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // roundedPanel2
             // 
             this.roundedPanel2.BackColor = System.Drawing.Color.Transparent;
             this.roundedPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedPanel2.Controls.Add(this.splitContainer1);
+            this.roundedPanel2.Controls.Add(this.roundedPanel11);
+            this.roundedPanel2.Controls.Add(this.metroPanel3);
+            this.roundedPanel2.Controls.Add(this.metroPanel2);
+            this.roundedPanel2.Controls.Add(this.panel1);
+            this.roundedPanel2.Controls.Add(this.tableLayoutPanel1);
             this.roundedPanel2.GradientEndColor = System.Drawing.Color.White;
             this.roundedPanel2.GradientStartColor = System.Drawing.Color.White;
             this.roundedPanel2.Image = null;
             this.roundedPanel2.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel2.Location = new System.Drawing.Point(30, 78);
+            this.roundedPanel2.Location = new System.Drawing.Point(17, 47);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.RoundCornerRadius = 20;
-            this.roundedPanel2.Size = new System.Drawing.Size(773, 310);
+            this.roundedPanel2.Size = new System.Drawing.Size(897, 348);
             this.roundedPanel2.TabIndex = 13;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.metroPanel1);
-            this.splitContainer1.Panel1.Controls.Add(this.metroLabel7);
-            this.splitContainer1.Panel1.Controls.Add(this.lblUnsynced);
-            this.splitContainer1.Panel1.Controls.Add(this.pnlOfflineSales);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.clientRegistrationControl1);
-            this.splitContainer1.Panel2Collapsed = true;
-            this.splitContainer1.Size = new System.Drawing.Size(773, 310);
-            this.splitContainer1.SplitterDistance = 348;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Controls.Add(this.roundedPanel11);
-            this.metroPanel1.Controls.Add(this.metroPanel3);
-            this.metroPanel1.Controls.Add(this.metroPanel2);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(3, 27);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(759, 211);
-            this.metroPanel1.TabIndex = 1;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // roundedPanel11
             // 
@@ -460,11 +302,11 @@ namespace Mana.Cards.Client
             this.roundedPanel11.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
             this.roundedPanel11.Image = null;
             this.roundedPanel11.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel11.Location = new System.Drawing.Point(614, 174);
+            this.roundedPanel11.Location = new System.Drawing.Point(760, 306);
             this.roundedPanel11.Name = "roundedPanel11";
             this.roundedPanel11.RoundCornerRadius = 15;
-            this.roundedPanel11.Size = new System.Drawing.Size(135, 34);
-            this.roundedPanel11.TabIndex = 0;
+            this.roundedPanel11.Size = new System.Drawing.Size(118, 34);
+            this.roundedPanel11.TabIndex = 45;
             // 
             // btnFinishSale
             // 
@@ -477,7 +319,7 @@ namespace Mana.Cards.Client
             this.btnFinishSale.ForeColor = System.Drawing.Color.White;
             this.btnFinishSale.Location = new System.Drawing.Point(3, 3);
             this.btnFinishSale.Name = "btnFinishSale";
-            this.btnFinishSale.Size = new System.Drawing.Size(123, 23);
+            this.btnFinishSale.Size = new System.Drawing.Size(105, 23);
             this.btnFinishSale.TabIndex = 0;
             this.btnFinishSale.Text = "Përfundo shitjen";
             this.btnFinishSale.UseVisualStyleBackColor = false;
@@ -485,17 +327,18 @@ namespace Mana.Cards.Client
             // 
             // metroPanel3
             // 
+            this.metroPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroPanel3.Controls.Add(this.roundedPanel10);
             this.metroPanel3.Controls.Add(this.roundedPanel9);
-            this.metroPanel3.Controls.Add(this.metroLabel8);
-            this.metroPanel3.Controls.Add(this.metroLabel5);
+            this.metroPanel3.Controls.Add(this.metroLabel11);
+            this.metroPanel3.Controls.Add(this.metroLabel10);
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(449, 3);
+            this.metroPanel3.Location = new System.Drawing.Point(435, 219);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(318, 159);
-            this.metroPanel3.TabIndex = 3;
+            this.metroPanel3.Size = new System.Drawing.Size(443, 77);
+            this.metroPanel3.TabIndex = 44;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
@@ -510,10 +353,10 @@ namespace Mana.Cards.Client
             this.roundedPanel10.GradientStartColor = System.Drawing.Color.Transparent;
             this.roundedPanel10.Image = null;
             this.roundedPanel10.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel10.Location = new System.Drawing.Point(165, 12);
+            this.roundedPanel10.Location = new System.Drawing.Point(165, 2);
             this.roundedPanel10.Name = "roundedPanel10";
             this.roundedPanel10.RoundCornerRadius = 15;
-            this.roundedPanel10.Size = new System.Drawing.Size(132, 34);
+            this.roundedPanel10.Size = new System.Drawing.Size(153, 34);
             this.roundedPanel10.TabIndex = 0;
             // 
             // lblTotal
@@ -540,10 +383,10 @@ namespace Mana.Cards.Client
             this.roundedPanel9.GradientStartColor = System.Drawing.Color.Transparent;
             this.roundedPanel9.Image = null;
             this.roundedPanel9.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel9.Location = new System.Drawing.Point(168, 91);
+            this.roundedPanel9.Location = new System.Drawing.Point(164, 42);
             this.roundedPanel9.Name = "roundedPanel9";
             this.roundedPanel9.RoundCornerRadius = 15;
-            this.roundedPanel9.Size = new System.Drawing.Size(132, 34);
+            this.roundedPanel9.Size = new System.Drawing.Size(154, 34);
             this.roundedPanel9.TabIndex = 1;
             // 
             // lblTotalDiscount
@@ -561,38 +404,37 @@ namespace Mana.Cards.Client
             this.lblTotalDiscount.UseCustomForeColor = true;
             this.lblTotalDiscount.UseStyleColors = true;
             // 
-            // metroLabel8
+            // metroLabel11
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.metroLabel8.Location = new System.Drawing.Point(75, 82);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(97, 50);
-            this.metroLabel8.TabIndex = 4;
-            this.metroLabel8.Text = "Totali me \r\nzbritje:";
-            this.metroLabel8.UseCustomForeColor = true;
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.metroLabel11.Location = new System.Drawing.Point(12, 46);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(123, 19);
+            this.metroLabel11.TabIndex = 4;
+            this.metroLabel11.Text = "Totali me zbritje:";
+            this.metroLabel11.UseCustomForeColor = true;
             // 
-            // metroLabel5
+            // metroLabel10
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.metroLabel5.Location = new System.Drawing.Point(75, 12);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(66, 25);
-            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel5.TabIndex = 2;
-            this.metroLabel5.Text = "Totali:";
-            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel5.UseCustomForeColor = true;
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.metroLabel10.Location = new System.Drawing.Point(12, 6);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel10.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel10.TabIndex = 2;
+            this.metroLabel10.Text = "Totali:";
+            this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel10.UseCustomForeColor = true;
             // 
             // metroPanel2
             // 
+            this.metroPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroPanel2.Controls.Add(this.roundedPanel8);
             this.metroPanel2.Controls.Add(this.roundedPanel7);
             this.metroPanel2.Controls.Add(this.roundedPanel6);
@@ -604,16 +446,16 @@ namespace Mana.Cards.Client
             this.metroPanel2.Controls.Add(this.metroLabel6);
             this.metroPanel2.Controls.Add(this.cardProgress);
             this.metroPanel2.Controls.Add(this.metroLabel4);
-            this.metroPanel2.Controls.Add(this.metroLabel3);
-            this.metroPanel2.Controls.Add(this.metroLabel2);
             this.metroPanel2.Controls.Add(this.metroLabel1);
+            this.metroPanel2.Controls.Add(this.metroLabel2);
+            this.metroPanel2.Controls.Add(this.metroLabel5);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel2.Location = new System.Drawing.Point(435, 10);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(443, 203);
-            this.metroPanel2.TabIndex = 2;
+            this.metroPanel2.TabIndex = 43;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
@@ -649,7 +491,6 @@ namespace Mana.Cards.Client
             this.button1.TabIndex = 0;
             this.button1.Text = "Gjej kartelën";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // roundedPanel7
             // 
@@ -964,17 +805,17 @@ namespace Mana.Cards.Client
             this.metroLabel4.Text = "Vlera në EUR:";
             this.metroLabel4.UseCustomForeColor = true;
             // 
-            // metroLabel3
+            // metroLabel1
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.metroLabel3.Location = new System.Drawing.Point(13, 130);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(148, 19);
-            this.metroLabel3.TabIndex = 6;
-            this.metroLabel3.Text = "Pikët për shfrytëzim:";
-            this.metroLabel3.UseCustomForeColor = true;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.metroLabel1.Location = new System.Drawing.Point(13, 130);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(148, 19);
+            this.metroLabel1.TabIndex = 6;
+            this.metroLabel1.Text = "Pikët për shfrytëzim:";
+            this.metroLabel1.UseCustomForeColor = true;
             // 
             // metroLabel2
             // 
@@ -988,71 +829,147 @@ namespace Mana.Cards.Client
             this.metroLabel2.Text = "Pikët në dispozicion:";
             this.metroLabel2.UseCustomForeColor = true;
             // 
-            // metroLabel1
+            // metroLabel5
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.metroLabel1.Location = new System.Drawing.Point(13, 8);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(71, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Kartela *:";
-            this.metroLabel1.UseCustomForeColor = true;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.metroLabel5.Location = new System.Drawing.Point(13, 8);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel5.TabIndex = 2;
+            this.metroLabel5.Text = "Kartela *:";
+            this.metroLabel5.UseCustomForeColor = true;
             // 
-            // metroLabel7
+            // panel1
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(489, 248);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(215, 19);
-            this.metroLabel7.TabIndex = 3;
-            this.metroLabel7.Text = "Shitje të pasinkronizuara me server:";
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.gridSales);
+            this.panel1.Location = new System.Drawing.Point(13, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(416, 181);
+            this.panel1.TabIndex = 42;
             // 
-            // lblUnsynced
+            // gridSales
             // 
-            this.lblUnsynced.AutoSize = true;
-            this.lblUnsynced.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblUnsynced.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblUnsynced.Location = new System.Drawing.Point(716, 249);
-            this.lblUnsynced.Name = "lblUnsynced";
-            this.lblUnsynced.Size = new System.Drawing.Size(16, 19);
-            this.lblUnsynced.TabIndex = 2;
-            this.lblUnsynced.Text = "0";
-            this.lblUnsynced.Click += new System.EventHandler(this.lblUnsynced_Click);
+            this.gridSales.AllowUserToAddRows = false;
+            this.gridSales.AllowUserToResizeRows = false;
+            this.gridSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSales.ContextMenuStrip = this.contextMenuStrip1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSales.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gridSales.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.gridSales.EnableHeadersVisualStyles = false;
+            this.gridSales.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.gridSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridSales.Location = new System.Drawing.Point(3, 3);
+            this.gridSales.MultiSelect = false;
+            this.gridSales.Name = "gridSales";
+            this.gridSales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.gridSales.RowHeadersVisible = false;
+            this.gridSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.gridSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSales.Size = new System.Drawing.Size(410, 175);
+            this.gridSales.Style = MetroFramework.MetroColorStyle.Purple;
+            this.gridSales.TabIndex = 5;
+            this.gridSales.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.gridSales.UseCustomBackColor = true;
+            this.gridSales.UseCustomForeColor = true;
+            this.gridSales.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSales_CellValueChanged);
+            this.gridSales.SelectionChanged += new System.EventHandler(this.gridSales_SelectionChanged);
             // 
-            // pnlOfflineSales
+            // contextMenuStrip1
             // 
-            this.pnlOfflineSales.HorizontalScrollbarBarColor = true;
-            this.pnlOfflineSales.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlOfflineSales.HorizontalScrollbarSize = 10;
-            this.pnlOfflineSales.Location = new System.Drawing.Point(482, 244);
-            this.pnlOfflineSales.Name = "pnlOfflineSales";
-            this.pnlOfflineSales.Size = new System.Drawing.Size(254, 28);
-            this.pnlOfflineSales.TabIndex = 4;
-            this.pnlOfflineSales.VerticalScrollbarBarColor = true;
-            this.pnlOfflineSales.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlOfflineSales.VerticalScrollbarSize = 10;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Text = "Fshij";
             // 
-            // clientRegistrationControl1
+            // tableLayoutPanel1
             // 
-            this.clientRegistrationControl1.Location = new System.Drawing.Point(3, 3);
-            this.clientRegistrationControl1.Name = "clientRegistrationControl1";
-            this.clientRegistrationControl1.Size = new System.Drawing.Size(745, 292);
-            this.clientRegistrationControl1.TabIndex = 2;
-            this.clientRegistrationControl1.UseSelectable = true;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 10);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(416, 100);
+            this.tableLayoutPanel1.TabIndex = 41;
             // 
-            // lblInfo
+            // tableLayoutPanel2
             // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.lblInfo.Location = new System.Drawing.Point(644, 62);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(135, 13);
-            this.lblInfo.TabIndex = 11;
-            this.lblInfo.Text = "K   A   R   T   E   L   A";
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btnNext, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnPrevious, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(313, 53);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(99, 43);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNext.Enabled = false;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Location = new System.Drawing.Point(52, 3);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(44, 37);
+            this.btnNext.TabIndex = 9;
+            this.btnNext.TabStop = false;
+            this.btnNext.Text = ">>";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrevious.Enabled = false;
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.Location = new System.Drawing.Point(3, 3);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(43, 37);
+            this.btnPrevious.TabIndex = 8;
+            this.btnPrevious.TabStop = false;
+            this.btnPrevious.Text = "<<";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // lblPartnerName
             // 
@@ -1060,68 +977,59 @@ namespace Mana.Cards.Client
             this.lblPartnerName.BackColor = System.Drawing.Color.Transparent;
             this.lblPartnerName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblPartnerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.lblPartnerName.Location = new System.Drawing.Point(30, 12);
+            this.lblPartnerName.Location = new System.Drawing.Point(18, 3);
             this.lblPartnerName.Name = "lblPartnerName";
             this.lblPartnerName.Size = new System.Drawing.Size(107, 19);
-            this.lblPartnerName.TabIndex = 8;
+            this.lblPartnerName.TabIndex = 10;
             this.lblPartnerName.Text = "MANA Partner";
             this.lblPartnerName.UseCustomBackColor = true;
             this.lblPartnerName.UseCustomForeColor = true;
             // 
-            // pictureBox1
+            // metroLabel3
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(647, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.metroLabel3.Location = new System.Drawing.Point(18, 19);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(242, 25);
+            this.metroLabel3.TabIndex = 5;
+            this.metroLabel3.Text = "Shitje përmes kartelës MANA";
+            this.metroLabel3.UseCustomBackColor = true;
+            this.metroLabel3.UseCustomForeColor = true;
             // 
-            // editModeLbl
+            // backgroundWorker1
             // 
-            this.editModeLbl.AutoSize = true;
-            this.editModeLbl.BackColor = System.Drawing.Color.Transparent;
-            this.editModeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editModeLbl.ForeColor = System.Drawing.Color.Red;
-            this.editModeLbl.Location = new System.Drawing.Point(481, 62);
-            this.editModeLbl.Name = "editModeLbl";
-            this.editModeLbl.Size = new System.Drawing.Size(140, 13);
-            this.editModeLbl.TabIndex = 9;
-            this.editModeLbl.Text = "Duke modifikuar shitjen";
-            this.editModeLbl.Visible = false;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // SalesForm
+            // backgroundWorker2
+            // 
+            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
+            this.backgroundWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker2_RunWorkerCompleted);
+            // 
+            // SaleProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 496);
+            this.ClientSize = new System.Drawing.Size(955, 508);
             this.Controls.Add(this.roundedPanel1);
-            this.Controls.Add(this.metroTabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "SalesForm";
-            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
+            this.Name = "SaleProductsForm";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.Style = MetroFramework.MetroColorStyle.White;
-            this.Theme = MetroFramework.MetroThemeStyle.Default;
-            this.Load += new System.EventHandler(this.SalesForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
-            this.metroTabControl1.ResumeLayout(false);
+            this.Text = "MANA - Shitja";
+            this.Load += new System.EventHandler(this.UnsyncedSalesForm_Load);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             this.roundedPanel14.ResumeLayout(false);
             this.roundedPanel13.ResumeLayout(false);
             this.roundedPanel12.ResumeLayout(false);
-            this.rpAddClient.ResumeLayout(false);
-            this.rpSale.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.roundedPanel2.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.ResumeLayout(false);
-            this.metroPanel1.ResumeLayout(false);
             this.roundedPanel11.ResumeLayout(false);
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
@@ -1135,71 +1043,66 @@ namespace Mana.Cards.Client
             this.roundedPanel5.ResumeLayout(false);
             this.roundedPanel4.ResumeLayout(false);
             this.roundedPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridSales)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private RoundedTextBox txtCardBarcode;
-        private RoundedTextBox txtAvailablePoints;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private RoundedTextBox txtRedeemPoints;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private RoundedTextBox txtRedeemValue;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel lblTotal;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroProgressSpinner cardProgress;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private MetroFramework.Controls.MetroLabel lblMinPoints;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel lblUnsynced;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroPanel pnlOfflineSales;
-        private RoundedTextBox txtClientName;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage salesDetails;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private ClientRegistrationControl clientRegistrationControl1;
         private MetroFramework.Controls.MetroLabel lblPartnerName;
-        private System.Windows.Forms.Label editModeLbl;
-        private System.Windows.Forms.Label lblInfo;
-        private RoundedPanel roundedPanel1;
-        private RoundedPanel roundedPanel2;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroLabel lblTotalDiscount;
-        private RoundedPanel roundedPanel7;
-        private RoundedPanel roundedPanel6;
-        private RoundedPanel roundedPanel5;
-        private RoundedPanel roundedPanel4;
-        private RoundedPanel roundedPanel3;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
         private RoundedPanel roundedPanel8;
         private System.Windows.Forms.Button button1;
-        private RoundedPanel rpAddClient;
-        private System.Windows.Forms.Button btnAddClient;
-        private RoundedPanel rpSale;
-        private System.Windows.Forms.Button btnSale;
+        private RoundedPanel roundedPanel7;
+        private RoundedTextBox txtRedeemValue;
+        private RoundedPanel roundedPanel6;
+        private RoundedTextBox txtRedeemPoints;
+        private RoundedPanel roundedPanel5;
+        private RoundedTextBox txtAvailablePoints;
+        private RoundedPanel roundedPanel4;
+        private RoundedTextBox txtClientName;
+        private RoundedPanel roundedPanel3;
+        private RoundedTextBox txtCardBarcode;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel lblMinPoints;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroProgressSpinner cardProgress;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private RoundedPanel roundedPanel10;
+        private MetroFramework.Controls.MetroLabel lblTotal;
+        private RoundedPanel roundedPanel9;
+        private MetroFramework.Controls.MetroLabel lblTotalDiscount;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private RoundedPanel roundedPanel11;
+        private System.Windows.Forms.Button btnFinishSale;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private MetroFramework.Controls.MetroGrid gridSales;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnNext;
+        private RoundedPanel roundedPanel14;
+        private RoundedTextBox txtEmployeeCardBarcode;
+        private MetroFramework.Controls.MetroLabel lblEmployeeCard;
         private RoundedPanel roundedPanel13;
         private System.Windows.Forms.Button btnSalesCancellation;
         private RoundedPanel roundedPanel12;
         private System.Windows.Forms.Button button2;
-        private RoundedPanel roundedPanel11;
-        private System.Windows.Forms.Button btnFinishSale;
-        private RoundedPanel roundedPanel10;
-        private RoundedPanel roundedPanel9;
-        private RoundedPanel roundedPanel14;
-        private RoundedTextBox txtEmployeeCardBarcode;
-        private MetroFramework.Controls.MetroLabel lblEmployeeCard;
     }
 }

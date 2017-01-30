@@ -1,4 +1,4 @@
-﻿using Mana.Cards.Client.CostumControls;
+﻿using Mana.Cards.Client.CustomControls;
 
 namespace Mana.Cards.Client
 {
@@ -31,16 +31,16 @@ namespace Mana.Cards.Client
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardResolverForm));
-            this.txtPhone = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.txtPhone = new Mana.Cards.Client.CustomControls.RoundedTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.birth_date = new System.Windows.Forms.DateTimePicker();
-            this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel11 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnFindCard = new System.Windows.Forms.Button();
-            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel7 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel3 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel7 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
@@ -254,11 +254,11 @@ namespace Mana.Cards.Client
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.DateTimePicker birth_date;
-        private CostumControls.RoundedPanel roundedPanel1;
-        private CostumControls.RoundedPanel roundedPanel2;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private CostumControls.RoundedPanel roundedPanel3;
-        private CostumControls.RoundedPanel roundedPanel7;
+        private CustomControls.RoundedPanel roundedPanel3;
+        private CustomControls.RoundedPanel roundedPanel7;
         private RoundedPanel roundedPanel11;
         private System.Windows.Forms.Button btnFindCard;
     }

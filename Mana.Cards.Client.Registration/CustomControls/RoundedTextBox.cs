@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Mana.Cards.Client.CostumControls
+namespace Mana.Cards.Client.CustomControls
 {
    public  class RoundedTextBox : MetroTextBox
     {

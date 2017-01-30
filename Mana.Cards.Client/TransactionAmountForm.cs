@@ -2,7 +2,7 @@
 using Mana.Cards.API.Exceptions;
 using Mana.Cards.API.Helpers;
 using Mana.Cards.API.Services;
-using Mana.Cards.Client.CostumControls;
+using Mana.Cards.Client.CustomControls;
 using MetroFramework;
 using MetroFramework.Forms;
 using System;

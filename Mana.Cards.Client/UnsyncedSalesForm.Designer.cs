@@ -35,11 +35,11 @@
             this.gridSales = new MetroFramework.Controls.MetroGrid();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lblPartnerName = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel8 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel8 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnSynchronize = new System.Windows.Forms.Button();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
@@ -149,19 +149,6 @@
             this.roundedPanel2.Size = new System.Drawing.Size(762, 275);
             this.roundedPanel2.TabIndex = 13;
             // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
-            this.metroLabel3.Location = new System.Drawing.Point(11, 3);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(211, 25);
-            this.metroLabel3.TabIndex = 5;
-            this.metroLabel3.Text = "Shitjet e pa-sinkronizuara";
-            this.metroLabel3.UseCustomForeColor = true;
-            // 
             // roundedPanel8
             // 
             this.roundedPanel8.BackColor = System.Drawing.Color.Transparent;
@@ -195,6 +182,19 @@
             this.btnSynchronize.UseVisualStyleBackColor = false;
             this.btnSynchronize.Click += new System.EventHandler(this.btnSynchronize_Click);
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.metroLabel3.Location = new System.Drawing.Point(11, 3);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(211, 25);
+            this.metroLabel3.TabIndex = 5;
+            this.metroLabel3.Text = "Shitjet e pa-sinkronizuara";
+            this.metroLabel3.UseCustomForeColor = true;
+            // 
             // UnsyncedSalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +204,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "UnsyncedSalesForm";
+            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Shitjet e pa-sinkronizuara";
@@ -223,10 +224,10 @@
         private MetroFramework.Controls.MetroGrid gridSales;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private MetroFramework.Controls.MetroLabel lblPartnerName;
-        private CostumControls.RoundedPanel roundedPanel1;
-        private CostumControls.RoundedPanel roundedPanel2;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private CostumControls.RoundedPanel roundedPanel8;
+        private CustomControls.RoundedPanel roundedPanel8;
         private System.Windows.Forms.Button btnSynchronize;
     }
 }

@@ -1,4 +1,4 @@
-﻿using Mana.Cards.Client.CostumControls;
+﻿using Mana.Cards.Client.CustomControls;
 
 namespace Mana.Cards.Client
 {
@@ -35,20 +35,20 @@ namespace Mana.Cards.Client
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesCancellationForm));
             this.gridSales = new MetroFramework.Controls.MetroGrid();
-            this.txtCardBarcode = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.txtCardBarcode = new Mana.Cards.Client.CustomControls.RoundedTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblPartnerName = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel5 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel5 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.loadSalesBtn = new System.Windows.Forms.Button();
-            this.roundedPanel4 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel4 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnResolveCard = new System.Windows.Forms.Button();
-            this.roundedPanel8 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel8 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel11 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.btnSelectSale = new System.Windows.Forms.Button();
-            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel3 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
             this.roundedPanel1.SuspendLayout();
@@ -401,17 +401,17 @@ namespace Mana.Cards.Client
         private RoundedTextBox txtCardBarcode;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblPartnerName;
-        private CostumControls.RoundedPanel roundedPanel1;
-        private CostumControls.RoundedPanel roundedPanel2;
-        private CostumControls.RoundedPanel roundedPanel11;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel2;
+        private CustomControls.RoundedPanel roundedPanel11;
         private System.Windows.Forms.Button btnSelectSale;
-        private CostumControls.RoundedPanel roundedPanel3;
+        private CustomControls.RoundedPanel roundedPanel3;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private CostumControls.RoundedPanel roundedPanel5;
+        private CustomControls.RoundedPanel roundedPanel5;
         private System.Windows.Forms.Button loadSalesBtn;
-        private CostumControls.RoundedPanel roundedPanel4;
+        private CustomControls.RoundedPanel roundedPanel4;
         private System.Windows.Forms.Button btnResolveCard;
-        private CostumControls.RoundedPanel roundedPanel8;
+        private CustomControls.RoundedPanel roundedPanel8;
         private System.Windows.Forms.Button btnRefresh;
     }
 }

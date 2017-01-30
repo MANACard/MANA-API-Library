@@ -13,6 +13,7 @@ namespace Mana.Cards.OfflineAPI.Services
     {
         private ISaleRepository saleRepository;
         private ISaleService saleService;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public SyncService()
         {
@@ -20,17 +21,16 @@ namespace Mana.Cards.OfflineAPI.Services
             saleService = new SaleService();
         }
         public void StartSync() {
-            var sales = saleRepository.GetSales();
+            var sales = saleRepository.GetSales().Where(x=>x != null);
 
             foreach (var item in sales) {
                 try
                 {
                     saleService.SubmitSale(item.Sale, item.TransactionId);
                 }
-                catch (SaleAlreadySubmittedException) { }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    throw;
+                    log.Error(ex.ToString());
                 }
             }
         }

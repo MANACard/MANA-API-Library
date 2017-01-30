@@ -237,6 +237,11 @@ namespace Mana.Cards.Client
 
                     }
 
+                    if (!string.IsNullOrEmpty(saleInfo.CustomMessage))
+                    {
+                        MetroMessageBox.Show(this, saleInfo.CustomMessage, "Informate", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                     //print ag
 
                     var printCouponOnCollect = Convert.ToBoolean(ConfigurationManager.AppSettings["PrintCouponOnCollect"]);

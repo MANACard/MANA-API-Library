@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Mana.Cards.Client.CostumControls
+namespace Mana.Cards.Client.CustomControls
 {
     public partial class RoundedPanel : Panel
     {

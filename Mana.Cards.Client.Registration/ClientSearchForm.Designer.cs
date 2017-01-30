@@ -1,4 +1,4 @@
-﻿using Mana.Cards.Client.CostumControls;
+﻿using Mana.Cards.Client.CustomControls;
 
 namespace Mana.Cards.Client
 {
@@ -37,22 +37,22 @@ namespace Mana.Cards.Client
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientSearchForm));
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.backgroundSearcher = new System.ComponentModel.BackgroundWorker();
-            this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.roundedPanel11 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.search = new System.Windows.Forms.Button();
-            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.firstnameTxt = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.roundedPanel3 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.firstnameTxt = new Mana.Cards.Client.CustomControls.RoundedTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel6 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.phoneTxt = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.roundedPanel6 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.phoneTxt = new Mana.Cards.Client.CustomControls.RoundedTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel5 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.lastnameTxt = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.roundedPanel5 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.lastnameTxt = new Mana.Cards.Client.CustomControls.RoundedTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.roundedPanel4 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.emailTxt = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.roundedPanel4 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.emailTxt = new Mana.Cards.Client.CustomControls.RoundedTextBox();
             this.clientsGrid = new MetroFramework.Controls.MetroGrid();
             this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -544,12 +544,12 @@ namespace Mana.Cards.Client
         private System.Windows.Forms.DataGridViewTextBoxColumn City;
         private System.ComponentModel.BackgroundWorker backgroundSearcher;
         private RoundedTextBox phoneTxt;
-        private CostumControls.RoundedPanel roundedPanel6;
-        private CostumControls.RoundedPanel roundedPanel5;
-        private CostumControls.RoundedPanel roundedPanel4;
-        private CostumControls.RoundedPanel roundedPanel3;
-        private CostumControls.RoundedPanel roundedPanel1;
-        private CostumControls.RoundedPanel roundedPanel2;
+        private CustomControls.RoundedPanel roundedPanel6;
+        private CustomControls.RoundedPanel roundedPanel5;
+        private CustomControls.RoundedPanel roundedPanel4;
+        private CustomControls.RoundedPanel roundedPanel3;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private RoundedPanel roundedPanel11;
         private System.Windows.Forms.Button search;

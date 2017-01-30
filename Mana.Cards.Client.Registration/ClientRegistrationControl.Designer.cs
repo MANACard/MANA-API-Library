@@ -1,4 +1,4 @@
-﻿using Mana.Cards.Client.CostumControls;
+﻿using Mana.Cards.Client.CustomControls;
 
 namespace Mana.Cards.Client
 {
@@ -31,26 +31,26 @@ namespace Mana.Cards.Client
         private void InitializeComponent()
         {
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
-            this.roundedPanel11 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.card = new Mana.Cards.Client.CostumControls.RoundedTextBox();
-            this.roundedPanel10 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel11 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.card = new Mana.Cards.Client.CustomControls.RoundedTextBox();
+            this.roundedPanel10 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.city = new System.Windows.Forms.TextBox();
-            this.roundedPanel9 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel9 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.registerClient = new System.Windows.Forms.Button();
-            this.roundedPanel8 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.gender = new Mana.Cards.Client.CostumControls.RoundedComboBox();
-            this.roundedPanel7 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel8 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.gender = new Mana.Cards.Client.CustomControls.RoundedComboBox();
+            this.roundedPanel7 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.birth_date = new System.Windows.Forms.DateTimePicker();
-            this.roundedPanel6 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.address = new Mana.Cards.Client.CostumControls.RoundedTextBox();
-            this.roundedPanel5 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.email = new Mana.Cards.Client.CostumControls.RoundedTextBox();
-            this.roundedPanel4 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.phone = new Mana.Cards.Client.CostumControls.RoundedTextBox();
-            this.roundedPanel2 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.lastName = new Mana.Cards.Client.CostumControls.RoundedTextBox();
-            this.roundedPanel3 = new Mana.Cards.Client.CostumControls.RoundedPanel();
-            this.firstName = new Mana.Cards.Client.CostumControls.RoundedTextBox();
+            this.roundedPanel6 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.address = new Mana.Cards.Client.CustomControls.RoundedTextBox();
+            this.roundedPanel5 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.email = new Mana.Cards.Client.CustomControls.RoundedTextBox();
+            this.roundedPanel4 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.phone = new Mana.Cards.Client.CustomControls.RoundedTextBox();
+            this.roundedPanel2 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.lastName = new Mana.Cards.Client.CustomControls.RoundedTextBox();
+            this.roundedPanel3 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.firstName = new Mana.Cards.Client.CustomControls.RoundedTextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.agree = new System.Windows.Forms.CheckBox();
             this.cardLabel = new MetroFramework.Controls.MetroLabel();
@@ -63,9 +63,9 @@ namespace Mana.Cards.Client
             this.birthdateLabel = new MetroFramework.Controls.MetroLabel();
             this.cityLabel = new MetroFramework.Controls.MetroLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.roundedPanel1 = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.clearFieldsBtn = new System.Windows.Forms.Button();
-            this.rpSale = new Mana.Cards.Client.CostumControls.RoundedPanel();
+            this.rpSale = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.searchClient = new System.Windows.Forms.Button();
             this.metroPanel5.SuspendLayout();
             this.roundedPanel11.SuspendLayout();
@@ -783,20 +783,20 @@ namespace Mana.Cards.Client
         private System.Windows.Forms.DateTimePicker birth_date;
         private System.Windows.Forms.CheckBox agree;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private CostumControls.RoundedPanel rpSale;
+        private CustomControls.RoundedPanel rpSale;
         private System.Windows.Forms.Button searchClient;
-        private CostumControls.RoundedPanel roundedPanel1;
+        private CustomControls.RoundedPanel roundedPanel1;
         private System.Windows.Forms.Button clearFieldsBtn;
-        private CostumControls.RoundedPanel roundedPanel8;
-        private CostumControls.RoundedPanel roundedPanel7;
-        private CostumControls.RoundedPanel roundedPanel6;
-        private CostumControls.RoundedPanel roundedPanel5;
-        private CostumControls.RoundedPanel roundedPanel4;
-        private CostumControls.RoundedPanel roundedPanel2;
-        private CostumControls.RoundedPanel roundedPanel3;
-        private CostumControls.RoundedPanel roundedPanel11;
-        private CostumControls.RoundedPanel roundedPanel10;
-        private CostumControls.RoundedPanel roundedPanel9;
+        private CustomControls.RoundedPanel roundedPanel8;
+        private CustomControls.RoundedPanel roundedPanel7;
+        private CustomControls.RoundedPanel roundedPanel6;
+        private CustomControls.RoundedPanel roundedPanel5;
+        private CustomControls.RoundedPanel roundedPanel4;
+        private CustomControls.RoundedPanel roundedPanel2;
+        private CustomControls.RoundedPanel roundedPanel3;
+        private CustomControls.RoundedPanel roundedPanel11;
+        private CustomControls.RoundedPanel roundedPanel10;
+        private CustomControls.RoundedPanel roundedPanel9;
         private System.Windows.Forms.Button registerClient;
         public RoundedTextBox firstName;
     }
