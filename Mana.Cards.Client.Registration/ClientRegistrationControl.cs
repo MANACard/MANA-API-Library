@@ -49,6 +49,13 @@ namespace Mana.Cards.Client
             backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
 
             InitGenders();
+
+            this.txtEmployeeCardBarcode.Text = EmployeeCardStore.Instance.Get();
+
+            if (!Config.UseEmployeeCardInRegistration)
+            {
+                txtEmployeeCardBarcode.Visible = lblEmployeeCard.Visible = roundedPanel14.Visible = false;
+            }
        
           
         }
@@ -94,6 +101,8 @@ namespace Mana.Cards.Client
             {
                 if (agree.Checked)
                 {
+                    EmployeeCardStore.Instance.Set(this.txtEmployeeCardBarcode.Text);
+
                     bool result = false;
                     registerClient.Enabled = false;
 
@@ -139,7 +148,8 @@ namespace Mana.Cards.Client
                     Phone = phone.Text,
                     City = cityId,
                     Gender = gender.SelectedValue as string,
-                    Birthdate = birth_date.Value
+                    Birthdate = birth_date.Value,
+                    EmployeeCardBarcode = txtEmployeeCardBarcode.Text
                 }, card.Text);
 
                 MetroMessageBox.Show(this.ParentForm, "Të dhënat u regjistruan me sukses", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -158,7 +168,8 @@ namespace Mana.Cards.Client
             {
                 service.UpdateClient(new Mana.Cards.API.Domain.Client()
                 {
-                    Id = CurrentClient.Id
+                    Id = CurrentClient.Id,
+                    EmployeeCardBarcode = txtEmployeeCardBarcode.Text
                 }, card.Text);
 
                 MetroMessageBox.Show(this.ParentForm, "Të dhënat u regjistruan me sukses", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -281,6 +292,37 @@ namespace Mana.Cards.Client
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("KushtetDheAfatet.txt");
+        }
+
+        private void txtEmployeeCardBarcode_TextChanged(object sender, EventArgs e)
+        {
+            if (this.txtEmployeeCardBarcode.Text.StartsWith("MANA") && this.txtEmployeeCardBarcode.Text.Length >= 11)
+            {
+                this.txtEmployeeCardBarcode.Enabled = false;
+                if (!backgroundWorker2.IsBusy)
+                    backgroundWorker2.RunWorkerAsync();
+            }
+        }
+
+        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                e.Result = new CardService().GetCardInfo(this.txtEmployeeCardBarcode.Text);
+            }
+            catch (CardNotFoundException)
+            {
+                MetroMessageBox.Show(this, "Kartela e shitësit nuk ekziston", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, ex.Message, "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void backgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.txtEmployeeCardBarcode.Enabled = true;
         }
 
     }

@@ -32,9 +32,9 @@ namespace Mana.Cards.Client
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaleProductsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.roundedPanel1 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.roundedPanel14 = new Mana.Cards.Client.CustomControls.RoundedPanel();
             this.txtEmployeeCardBarcode = new Mana.Cards.Client.CustomControls.RoundedTextBox();
@@ -86,6 +86,9 @@ namespace Mana.Cards.Client
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.roundedPanel15 = new Mana.Cards.Client.CustomControls.RoundedPanel();
+            this.txtProductSearch = new Mana.Cards.Client.CustomControls.RoundedTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.roundedPanel1.SuspendLayout();
             this.roundedPanel14.SuspendLayout();
             this.roundedPanel13.SuspendLayout();
@@ -107,6 +110,7 @@ namespace Mana.Cards.Client
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.roundedPanel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // roundedPanel1
@@ -127,7 +131,7 @@ namespace Mana.Cards.Client
             this.roundedPanel1.Location = new System.Drawing.Point(6, 26);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.RoundCornerRadius = 20;
-            this.roundedPanel1.Size = new System.Drawing.Size(944, 473);
+            this.roundedPanel1.Size = new System.Drawing.Size(933, 540);
             this.roundedPanel1.TabIndex = 14;
             // 
             // roundedPanel14
@@ -140,7 +144,7 @@ namespace Mana.Cards.Client
             this.roundedPanel14.GradientStartColor = System.Drawing.Color.White;
             this.roundedPanel14.Image = null;
             this.roundedPanel14.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel14.Location = new System.Drawing.Point(18, 420);
+            this.roundedPanel14.Location = new System.Drawing.Point(18, 494);
             this.roundedPanel14.Name = "roundedPanel14";
             this.roundedPanel14.RoundCornerRadius = 15;
             this.roundedPanel14.Size = new System.Drawing.Size(218, 34);
@@ -186,7 +190,7 @@ namespace Mana.Cards.Client
             this.lblEmployeeCard.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployeeCard.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblEmployeeCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
-            this.lblEmployeeCard.Location = new System.Drawing.Point(18, 398);
+            this.lblEmployeeCard.Location = new System.Drawing.Point(18, 472);
             this.lblEmployeeCard.Name = "lblEmployeeCard";
             this.lblEmployeeCard.Size = new System.Drawing.Size(146, 19);
             this.lblEmployeeCard.TabIndex = 29;
@@ -205,7 +209,7 @@ namespace Mana.Cards.Client
             this.roundedPanel13.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
             this.roundedPanel13.Image = null;
             this.roundedPanel13.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel13.Location = new System.Drawing.Point(733, 412);
+            this.roundedPanel13.Location = new System.Drawing.Point(733, 491);
             this.roundedPanel13.Name = "roundedPanel13";
             this.roundedPanel13.RoundCornerRadius = 15;
             this.roundedPanel13.Size = new System.Drawing.Size(164, 34);
@@ -238,7 +242,7 @@ namespace Mana.Cards.Client
             this.roundedPanel12.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
             this.roundedPanel12.Image = null;
             this.roundedPanel12.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel12.Location = new System.Drawing.Point(566, 412);
+            this.roundedPanel12.Location = new System.Drawing.Point(566, 491);
             this.roundedPanel12.Name = "roundedPanel12";
             this.roundedPanel12.RoundCornerRadius = 15;
             this.roundedPanel12.Size = new System.Drawing.Size(164, 34);
@@ -277,6 +281,8 @@ namespace Mana.Cards.Client
             // 
             this.roundedPanel2.BackColor = System.Drawing.Color.Transparent;
             this.roundedPanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.roundedPanel2.Controls.Add(this.roundedPanel15);
+            this.roundedPanel2.Controls.Add(this.metroLabel7);
             this.roundedPanel2.Controls.Add(this.roundedPanel11);
             this.roundedPanel2.Controls.Add(this.metroPanel3);
             this.roundedPanel2.Controls.Add(this.metroPanel2);
@@ -286,10 +292,10 @@ namespace Mana.Cards.Client
             this.roundedPanel2.GradientStartColor = System.Drawing.Color.White;
             this.roundedPanel2.Image = null;
             this.roundedPanel2.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel2.Location = new System.Drawing.Point(17, 47);
+            this.roundedPanel2.Location = new System.Drawing.Point(17, 48);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.RoundCornerRadius = 20;
-            this.roundedPanel2.Size = new System.Drawing.Size(897, 348);
+            this.roundedPanel2.Size = new System.Drawing.Size(897, 421);
             this.roundedPanel2.TabIndex = 13;
             // 
             // roundedPanel11
@@ -302,7 +308,7 @@ namespace Mana.Cards.Client
             this.roundedPanel11.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
             this.roundedPanel11.Image = null;
             this.roundedPanel11.ImageLocation = new System.Drawing.Point(4, 4);
-            this.roundedPanel11.Location = new System.Drawing.Point(760, 306);
+            this.roundedPanel11.Location = new System.Drawing.Point(760, 358);
             this.roundedPanel11.Name = "roundedPanel11";
             this.roundedPanel11.RoundCornerRadius = 15;
             this.roundedPanel11.Size = new System.Drawing.Size(118, 34);
@@ -335,7 +341,7 @@ namespace Mana.Cards.Client
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(435, 219);
+            this.metroPanel3.Location = new System.Drawing.Point(435, 271);
             this.metroPanel3.Name = "metroPanel3";
             this.metroPanel3.Size = new System.Drawing.Size(443, 77);
             this.metroPanel3.TabIndex = 44;
@@ -452,7 +458,7 @@ namespace Mana.Cards.Client
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(435, 10);
+            this.metroPanel2.Location = new System.Drawing.Point(435, 62);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(443, 203);
             this.metroPanel2.TabIndex = 43;
@@ -845,7 +851,7 @@ namespace Mana.Cards.Client
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.gridSales);
-            this.panel1.Location = new System.Drawing.Point(13, 116);
+            this.panel1.Location = new System.Drawing.Point(13, 168);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(416, 181);
             this.panel1.TabIndex = 42;
@@ -859,24 +865,24 @@ namespace Mana.Cards.Client
             this.gridSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSales.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSales.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSales.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridSales.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.gridSales.EnableHeadersVisualStyles = false;
             this.gridSales.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -885,14 +891,14 @@ namespace Mana.Cards.Client
             this.gridSales.MultiSelect = false;
             this.gridSales.Name = "gridSales";
             this.gridSales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridSales.RowHeadersVisible = false;
             this.gridSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -920,7 +926,7 @@ namespace Mana.Cards.Client
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 10);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 62);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1010,11 +1016,74 @@ namespace Mana.Cards.Client
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             this.backgroundWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker2_RunWorkerCompleted);
             // 
+            // roundedPanel15
+            // 
+            this.roundedPanel15.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPanel15.BorderColor = System.Drawing.Color.Gray;
+            this.roundedPanel15.BorderWidth = 2;
+            this.roundedPanel15.Controls.Add(this.txtProductSearch);
+            this.roundedPanel15.GradientEndColor = System.Drawing.Color.White;
+            this.roundedPanel15.GradientStartColor = System.Drawing.Color.White;
+            this.roundedPanel15.Image = null;
+            this.roundedPanel15.ImageLocation = new System.Drawing.Point(4, 4);
+            this.roundedPanel15.Location = new System.Drawing.Point(74, 22);
+            this.roundedPanel15.Name = "roundedPanel15";
+            this.roundedPanel15.RoundCornerRadius = 15;
+            this.roundedPanel15.Size = new System.Drawing.Size(218, 34);
+            this.roundedPanel15.TabIndex = 46;
+            // 
+            // txtProductSearch
+            // 
+            this.txtProductSearch.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtProductSearch.CustomButton.Image = null;
+            this.txtProductSearch.CustomButton.Location = new System.Drawing.Point(185, 1);
+            this.txtProductSearch.CustomButton.Name = "";
+            this.txtProductSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtProductSearch.CustomButton.Style = MetroFramework.MetroColorStyle.White;
+            this.txtProductSearch.CustomButton.TabIndex = 1;
+            this.txtProductSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtProductSearch.CustomButton.UseSelectable = true;
+            this.txtProductSearch.CustomButton.Visible = false;
+            this.txtProductSearch.Lines = new string[0];
+            this.txtProductSearch.Location = new System.Drawing.Point(3, 3);
+            this.txtProductSearch.MaxLength = 32767;
+            this.txtProductSearch.Name = "txtProductSearch";
+            this.txtProductSearch.PasswordChar = '\0';
+            this.txtProductSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtProductSearch.SelectedText = "";
+            this.txtProductSearch.SelectionLength = 0;
+            this.txtProductSearch.SelectionStart = 0;
+            this.txtProductSearch.Size = new System.Drawing.Size(207, 23);
+            this.txtProductSearch.Style = MetroFramework.MetroColorStyle.White;
+            this.txtProductSearch.TabIndex = 0;
+            this.txtProductSearch.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtProductSearch.UseCustomBackColor = true;
+            this.txtProductSearch.UseSelectable = true;
+            this.txtProductSearch.UseStyleColors = true;
+            this.txtProductSearch.WaterMarkColor = System.Drawing.Color.White;
+            this.txtProductSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtProductSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductSearch_KeyDown);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
+            this.metroLabel7.Location = new System.Drawing.Point(13, 27);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(53, 19);
+            this.metroLabel7.TabIndex = 47;
+            this.metroLabel7.Text = "Kërko:";
+            this.metroLabel7.UseCustomForeColor = true;
+            // 
             // SaleProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 508);
+            this.ClientSize = new System.Drawing.Size(946, 568);
             this.Controls.Add(this.roundedPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1030,6 +1099,7 @@ namespace Mana.Cards.Client
             this.roundedPanel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.roundedPanel2.ResumeLayout(false);
+            this.roundedPanel2.PerformLayout();
             this.roundedPanel11.ResumeLayout(false);
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
@@ -1047,6 +1117,7 @@ namespace Mana.Cards.Client
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.roundedPanel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1104,5 +1175,8 @@ namespace Mana.Cards.Client
         private System.Windows.Forms.Button btnSalesCancellation;
         private RoundedPanel roundedPanel12;
         private System.Windows.Forms.Button button2;
+        private RoundedPanel roundedPanel15;
+        private RoundedTextBox txtProductSearch;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
     }
 }

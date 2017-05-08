@@ -116,7 +116,7 @@ namespace Mana.Cards.Client
 
             try
             {
-                this.products = service.GetProducts((int)e.Argument, 7);
+                this.products = service.GetProducts((int)e.Argument, 7, txtProductSearch.Text);
                 e.Result = this.products;
             }
             catch (AuthenticationFailedException ex)
@@ -130,18 +130,20 @@ namespace Mana.Cards.Client
             IEnumerable<Product> products = ((ProductsViewModel)e.Result).Products;
             this.tableLayoutPanel1.SuspendLayout();
 
-            foreach (Control control in this.tableLayoutPanel1.Controls)
+
+            for (int i = this.tableLayoutPanel1.Controls.Count - 1; i >= 0; i--)
             {
-                if (control is RoundedPanel)
+                if (this.tableLayoutPanel1.Controls[i] is RoundedPanel)
                 {
-                    this.tableLayoutPanel1.Controls.Remove(control);
+                    this.tableLayoutPanel1.Controls.RemoveAt(i);
                 }
             }
+
             this.tableLayoutPanel1.ResumeLayout();
             this.tableLayoutPanel1.SuspendLayout();
+
             foreach (var product in products)
             {
-
                 var button = new Button();
                 button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(130)))));
                 button.FlatAppearance.BorderSize = 0;
@@ -171,11 +173,10 @@ namespace Mana.Cards.Client
                 rp.Image = null;
                 rp.ImageLocation = new System.Drawing.Point(4, 4);
                 rp.Location = new System.Drawing.Point(3, 3);
-                rp.Name = "roundedPanel3";
+                rp.Name = "roundedPanel0";
                 rp.RoundCornerRadius = 15;
                 //                rp.Size = new System.Drawing.Size(160, 34);
                 //     rp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-
                 this.tableLayoutPanel1.Controls.Add(rp);
             }
 
@@ -482,5 +483,13 @@ namespace Mana.Cards.Client
             backgroundWorker1.RunWorkerAsync(page);
         }
         #endregion
+
+        private void txtProductSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.GetProducts();
+            }
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Mana.Cards.Client.Registration
 
         private void ClientRegistrationForm_Load(object sender, EventArgs e)
         {
-            this.lblPartnerName.Text = AuthenticationHelper.GetPartnerName();
+            //this.lblPartnerName.Text = AuthenticationHelper.GetPartnerName();
         }
     }
 }

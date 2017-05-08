@@ -5,7 +5,7 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 
-namespace Mana.Cards.Client
+namespace Mana.Cards.API.Helpers
 {
     public class EmployeeCardStore
     {

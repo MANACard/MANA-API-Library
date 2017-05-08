@@ -23,5 +23,16 @@ namespace Mana.Cards.API.Domain
         [JsonProperty("birth_date")]
         public DateTime? Birthdate { get; set; }
         public int? City { get; set; }
+
+        [JsonProperty("business")]
+        public bool Business { get; set; }
+        [JsonProperty("business_name")]
+        public string BusinessName { get; set; }
+        [JsonProperty("business_type")]
+        public string BusinessType { get; set; }
+
+
+        [JsonProperty("employee_card_barcode")]
+        public string EmployeeCardBarcode { get; set; }
     }
 }

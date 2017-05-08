@@ -143,6 +143,19 @@ namespace Mana.Cards.API.Helpers
                 return result;
             }
         }
+        public static bool UseEmployeeCardInRegistration
+        {
+            get
+            {
+                bool result = false;
+                if (ConfigurationManager.AppSettings["UseEmployeeCardInRegistration"] != null)
+                {
+                    Boolean.TryParse(ConfigurationManager.AppSettings["UseEmployeeCardInRegistration"].ToString(), out result);
+                }
+
+                return result;
+            }
+        }
         public static string EmployeeCardLocation
         {
             get

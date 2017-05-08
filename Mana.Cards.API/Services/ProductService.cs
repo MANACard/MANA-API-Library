@@ -13,9 +13,14 @@ namespace Mana.Cards.API.Services
 {
     public class ProductService : IProductService
     {
-        public ProductsViewModel GetProducts(int page = 1, int per_page = 25)
+        public ProductsViewModel GetProducts(int page = 1, int per_page = 25, string searchText = "")
         {
             var url = String.Format("{0}{1}?page={2}&per_page={3}", Config.APIUrl, "/products", page, per_page);
+
+            if (!string.IsNullOrEmpty(searchText)) {
+                url = String.Format("{0}&terms={1}", url, searchText);
+            }
+
 
             var request = System.Net.WebRequest.Create(url) as System.Net.HttpWebRequest;
             request.KeepAlive = true;

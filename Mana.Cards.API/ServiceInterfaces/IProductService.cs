@@ -8,7 +8,7 @@ namespace Mana.Cards.API.ServiceInterfaces
 {
     public interface IProductService
     {
-        ProductsViewModel GetProducts(int page = 1, int per_page = 25);
+        ProductsViewModel GetProducts(int page = 1, int per_page = 25, string searchText = "");
 
     }
 }
