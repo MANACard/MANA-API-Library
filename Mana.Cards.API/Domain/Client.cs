@@ -24,6 +24,9 @@ namespace Mana.Cards.API.Domain
         public DateTime? Birthdate { get; set; }
         public int? City { get; set; }
 
+        [JsonProperty("point_of_sale_password")]
+        public string PointOfSalePassword { get; set; }
+
         [JsonProperty("business")]
         public bool Business { get; set; }
         [JsonProperty("business_name")]

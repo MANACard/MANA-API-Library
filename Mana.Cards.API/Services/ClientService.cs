@@ -39,10 +39,11 @@ namespace Mana.Cards.API.Services
                 string.Format("{0}={1}", "client[city_id]", c.City),
                 string.Format("{0}={1}", "client[address]", c.Address),
                 string.Format("{0}={1}", "client[birth_date]", c.Birthdate.HasValue ? c.Birthdate.Value.Date.ToString("yyyy-MM-dd") : string.Empty),
-                string.Format("{0}={1}", "client[business]", c.Business),
+                string.Format("{0}={1}", "client[business]", c.Business ? "1" : "0"),
                 string.Format("{0}={1}", "client[business_name]", c.BusinessName),
                 string.Format("{0}={1}", "client[business_type]", c.BusinessType),
                 string.Format("{0}={1}", "client[terms_of_service]", "1"),
+                string.Format("{0}={1}", "client[point_of_sale_password]", c.PointOfSalePassword),
                 string.Format("{0}={1}", "barcode", card),
                 string.Format("{0}={1}", "client[employee_card_barcode]", c.EmployeeCardBarcode)
 
